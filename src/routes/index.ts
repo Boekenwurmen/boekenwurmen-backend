@@ -1,5 +1,5 @@
 import Express, { Router } from 'express';
-import { getClient, getClients } from '../controllers/clientsController.js';
+import { getClient, getClients, createClient, updateClient, loginClient } from '../controllers/clientsController.js';
 const router: Router = Express.Router();
 
 // router.get('/', (req: Request, res: Response, next: NextFunction) => {
@@ -8,5 +8,8 @@ const router: Router = Express.Router();
 // });
 router.get('/clients', getClients);
 router.get('/clients/:id', getClient);
+router.post('/clients', createClient);
+router.patch('/clients/:id', updateClient);
+router.post('/clients/login', loginClient);
 
 export default router;
