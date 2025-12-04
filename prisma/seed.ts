@@ -20,6 +20,7 @@ const clients: Client[] = [
   },
 ];
 
+
 // first look if the exist in the database and then add them
 
 const load = async (): Promise<void> => {
