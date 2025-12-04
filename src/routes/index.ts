@@ -1,6 +1,5 @@
 import Express, { Router } from 'express';
 import { getClient, getClients } from '../controllers/clientsController.js';
-import Cors from 'cors';
 import { getBooks, getChoices, getPages, getStory } from '../controllers/booksController.ts';
 
 const router: Router = Express.Router();
