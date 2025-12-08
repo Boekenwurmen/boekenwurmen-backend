@@ -150,11 +150,11 @@ export async function getChoices(req: Request, res: Response, next: NextFunction
 }
 
 function _getPageStory(bookId:number | null | undefined, pageId:number | null | undefined):string {
-  return _getPageStoryJson(bookId, pageId-1);
+  return _getPageStoryJson(bookId, pageId-1); //frontend verwacht dat een verhaal op pagina 1 begint, maar een array uit json begint op index 0
 }
 
 function _getPageOptions(bookId:number | null | undefined, pageId:number | null | undefined):{ toPage: number; name: string; }[] {
-  return _getPageOptionsJson(bookId, pageId-1);
+  return _getPageOptionsJson(bookId, pageId-1); //frontend verwacht dat een verhaal op pagina 1 begint, maar een array uit json begint op index 0
 }
 
 function _getPageStoryJson(bookId:number | null | undefined, pageId:number | null | undefined):string {
