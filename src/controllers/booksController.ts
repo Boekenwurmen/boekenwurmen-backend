@@ -165,7 +165,7 @@ function _getPageStoryJson(bookId:number | null | undefined, pageId:number | nul
 function _getPageOptionsJson(bookId:number | null | undefined, pageId:number | null | undefined):{ toPage: number; name: string; }[] {
   const page = _getPageJson(bookId, pageId);
   return page?.options ?? [
-    {toPage:1, name:"Go back"},
+    {toPage:0, name:"Go back"},
   ];
 }
 
