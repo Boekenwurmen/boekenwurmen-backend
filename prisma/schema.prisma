@@ -8,14 +8,23 @@ generator client {
   provider = "prisma-client-js"
 }
 
+generator book {
+  provider = "prisma-book-js"
+}
+
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
 }
 
 model Client {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   email     String   @unique
+  name      String?
+}
+
+model Book {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
   name      String?
 }

@@ -6,5 +6,11 @@ CREATE TABLE "Client" (
     "name" TEXT
 );
 
+CREATE TABLE "Book" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "name" TEXT
+);
+
 -- CreateIndex
 CREATE UNIQUE INDEX "Client_email_key" ON "Client"("email");

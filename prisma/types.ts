@@ -14,4 +14,11 @@ interface Client {
   email: string,
 }
 
+interface Book {
+  id?: number,
+  createdAt?: Date,
+  name: string,
+}
+
 export { Client };
+export { Book }
