@@ -1,0 +1,16 @@
+node_modules
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+npm-debug.log
+.DS_Store
+*.md
+.vscode
+.idea
+coverage
+Dockerfile
+.dockerignore
+prisma/*.db
+prisma/*.db-journal

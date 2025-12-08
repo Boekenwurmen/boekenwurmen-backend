@@ -25,11 +25,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
-<<<<<<< HEAD
-    "@types/cors": "^2.8.17",
-=======
     "@types/cors": "^2.8.19",
->>>>>>> 471230ba5bd264411de3d4e56c85840e76f36a95
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
     "@typescript-eslint/eslint-plugin": "^8.40",
