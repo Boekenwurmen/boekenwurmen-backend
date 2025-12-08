@@ -68,7 +68,7 @@ export async function createClient(req: Request, res: Response, next: NextFuncti
   try {
     const { name } = req.body as Partial<Client>;
     if (!name || typeof name !== 'string' || !name.trim()) {
-      res.status(400).json({ success: false, message: 'Name is required' });
+      res.status(400).json({ success: false, message: 'Name is required and must be a non-empty string' });
       return;
     }
     const client = await prisma.client.create({ data: { name: name.trim() } });
@@ -87,12 +87,25 @@ export async function createClient(req: Request, res: Response, next: NextFuncti
  */
 export async function updateClient(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
-    const id = parseInt(req.params.id);
+    const idRaw = req.params.id;
+    const id = Number.parseInt(idRaw, 10);
+    if (!Number.isFinite(id) || id <= 0) {
+      res.status(400).json({ success: false, message: 'Invalid id parameter' });
+      return;
+    }
     const { code } = req.body as Partial<Client>;
-    const data: any = {};
-    if (typeof code === 'string' && code.length > 0) {
+    const data: Partial<Pick<Client, 'code'>> = {};
+    if (typeof code === 'string') {
+      if (code.length < 8) {
+        res.status(400).json({ success: false, message: 'Code must be at least 8 characters long' });
+        return;
+      }
       const hash = await bcrypt.hash(code, 10);
       data.code = hash;
+    }
+    if (Object.keys(data).length === 0) {
+      res.status(400).json({ success: false, message: 'No valid update data provided' });
+      return;
     }
     const client = await prisma.client.update({ where: { id }, data });
     res.json({ success: true, client });
