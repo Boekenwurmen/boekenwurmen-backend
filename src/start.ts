@@ -6,6 +6,7 @@ import IndexRouter from './routes/index.js';
 import { errorHandler } from './middleware/errors/errorHandler.js';
 import helmet from 'helmet';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 
 const app: Application = Express();
 const port: number = process.env.PORT ? parseInt(process.env.PORT) : 3012;
@@ -13,6 +14,7 @@ const port: number = process.env.PORT ? parseInt(process.env.PORT) : 3012;
 // security middleware
 app.use(helmet());
 app.use(cors({ origin: true, credentials: true }));
+app.use(cookieParser());
 
 // support json encoded and url-encoded bodies, mainly used for post and update
 app.use(Express.json());

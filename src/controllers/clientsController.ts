@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
 import bcrypt from 'bcryptjs';
 import { Client } from '../../prisma/types.ts';
+import { signAccessToken, signRefreshToken, verifyRefreshToken } from '../middleware/auth.js';
 const prisma: PrismaClient = new PrismaClient();
 
 /**
@@ -120,8 +121,71 @@ export async function loginClient(req: Request, res: Response, next: NextFunctio
       res.status(401).json({ success: false, message: 'Invalid credentials' });
       return;
     }
-    res.json({ success: true, client: { id: client.id, name: client.name } });
+    const payload = { sub: client.id, name: client.name };
+    const accessToken = signAccessToken(payload);
+    const refreshToken = signRefreshToken(payload);
+    // Set HttpOnly cookies if desired; otherwise return tokens in body
+    const useCookies = true;
+    if (useCookies) {
+      const isProd = process.env.NODE_ENV === 'production';
+      res.cookie('access_token', accessToken, {
+        httpOnly: true,
+        secure: isProd,
+        sameSite: 'lax',
+        path: '/',
+        maxAge: 15 * 60 * 1000,
+      });
+      res.cookie('refresh_token', refreshToken, {
+        httpOnly: true,
+        secure: isProd,
+        sameSite: 'lax',
+        path: '/',
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+      });
+      res.json({ success: true, client: { id: client.id, name: client.name } });
+    } else {
+      res.json({ success: true, client: { id: client.id, name: client.name }, tokens: { accessToken, refreshToken } });
+    }
   } catch (err) {
     next(err);
   }
+}
+
+/**
+ * Refresh access token using refresh token cookie or header
+ */
+export async function refreshToken(req: Request, res: Response, next: NextFunction): Promise<void> {
+  try {
+    const token = (req as any).cookies?.refresh_token || (req.headers['x-refresh-token'] as string | undefined);
+    if (!token) {
+      res.status(401).json({ success: false, message: 'Missing refresh token' });
+      return;
+    }
+    const payload = verifyRefreshToken(token);
+    if (!payload) {
+      res.status(401).json({ success: false, message: 'Invalid refresh token' });
+      return;
+    }
+    const accessToken = signAccessToken({ sub: payload.sub, name: payload.name, role: payload.role });
+    const isProd = process.env.NODE_ENV === 'production';
+    res.cookie('access_token', accessToken, {
+      httpOnly: true,
+      secure: isProd,
+      sameSite: 'lax',
+      path: '/',
+      maxAge: 15 * 60 * 1000,
+    });
+    res.json({ success: true });
+  } catch (err) {
+    next(err);
+  }
+}
+
+/**
+ * Logout: clear cookies
+ */
+export async function logoutClient(req: Request, res: Response): Promise<void> {
+  res.clearCookie('access_token', { path: '/' });
+  res.clearCookie('refresh_token', { path: '/' });
+  res.json({ success: true });
 }
