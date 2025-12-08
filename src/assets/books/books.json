@@ -1,197 +1,234 @@
 {
-  "title": "De Race Tegen de Tijd",
-  "pages": [
+  "books": [
     {
-      "story": "Je ontwaakt in een lichtflits: je bent terug in de middeleeuwen. Je timer op je pols toont dat je nog één uur hebt voor je automatisch terugteleporteert naar het heden. Je missie: een middeleeuws document ophalen dat je toekomst kan redden.",
-      "options": [
-        {"toPage": 1, "text": "Oriënteer je in het dorp"},
-        {"toPage": 2, "text": "Zoek direct het kasteel op"}
+      "title": "test 1",
+      "pages": [
+        {
+          "story": "dit is een verhaal",
+          "options": [
+            {"toPage": 1, "text": "doe dit"},
+            {"toPage": 3, "text": "of doe dat"}
+          ]
+        },
+        {
+          "story": "dit is een verhaal",
+          "options": [
+            {"toPage": 1, "text": "doe dit"},
+            {"toPage": 3, "text": "of doe dat"}
+          ]
+        },
+        {
+          "story": "dit is een verhaal",
+          "options": [
+            {"toPage": 1, "text": "doe dit"},
+            {"toPage": 3, "text": "of doe dat"}
+          ]
+        },
+        {
+          "story": "dit is een verhaal",
+          "options": [
+            {"toPage": 1, "text": "doe dit"},
+            {"toPage": 3, "text": "of doe dat"}
+          ]
+        }
       ]
     },
     {
-      "story": "Je loopt het dorp binnen. Mensen staren kort maar gaan verder met hun werk. Een marktkoopman wenkt je.",
-      "options": [
-        {"toPage": 3, "text": "Met de koopman praten"},
-        {"toPage": 4, "text": "Verder het dorp in lopen"}
-      ]
-    },
-    {
-      "story": "Je arriveert bij de poort van het kasteel. De wachters kijken achterdochtig.",
-      "options": [
-        {"toPage": 5, "text": "Probeer je verhaal uit te leggen"},
-        {"toPage": 6, "text": "Zoek een geheime ingang"}
-      ]
-    },
-    {
-      "story": "De koopman vraagt waarom je zo'n vreemd apparaat op je pols hebt.",
-      "options": [
-        {"toPage": 7, "text": "Een leugentje vertellen"},
-        {"toPage": 8, "text": "De waarheid vertellen"}
-      ]
-    },
-    {
-      "story": "Dieper in het dorp zie je een kleine taverne en een smalle zijstraat.",
-      "options": [
-        {"toPage": 9, "text": "De taverne binnengaan"},
-        {"toPage": 10, "text": "De zijstraat in glippen"}
-      ]
-    },
-    {
-      "story": "De wachters geloven geen woord van je verhaal. Ze dreigen je gevangen te nemen.",
-      "options": [
-        {"toPage": 11, "text": "Vlucht weg"},
-        {"toPage": 12, "text": "Blijf standvastig"}
-      ]
-    },
-    {
-      "story": "Je vindt een halfverborgen doorgang achter struiken. Het lijkt naar binnen te leiden.",
-      "options": [
-        {"toPage": 13, "text": "Ga de geheime ingang binnen"},
-        {"toPage": 14, "text": "Terug naar de poort"}
-      ]
-    },
-    {
-      "story": "Je zegt dat het apparaat een nieuwe soort zonnewijzer is. De koopman lacht en vertelt over een schrijver in het kasteel die oude documenten bewaart.",
-      "options": [
-        {"toPage": 2, "text": "Naar het kasteel gaan"},
-        {"toPage": 9, "text": "Eerst naar de taverne"}
-      ]
-    },
-    {
-      "story": "Je vertelt eerlijk dat je uit de toekomst komt. De koopman schrikt, maar gelooft je opvallend snel en wijst je een 'verborgen route' naar het kasteel.",
-      "options": [
-        {"toPage": 6, "text": "De geheime route nemen"},
-        {"toPage": 4, "text": "Toch verder het dorp in"}
-      ]
-    },
-    {
-      "story": "In de taverne praat de waard zachtjes over een ‘verboden document’ dat de koning bewaart.",
-      "options": [
-        {"toPage": 15, "text": "Meer informatie vragen"},
-        {"toPage": 2, "text": "Naar het kasteel vertrekken"}
-      ]
-    },
-    {
-      "story": "In de donkere straat zie je twee mensen fluisteren. Ze stoppen meteen zodra ze je zien.",
-      "options": [
-        {"toPage": 16, "text": "Naderen en aanspreken"},
-        {"toPage": 11, "text": "Snel weggaan"}
-      ]
-    },
-    {
-      "story": "Je vlucht van de wachters weg. Je hart bonst, maar je bent veilig.",
-      "options": [
-        {"toPage": 4, "text": "Terug naar het dorp"},
-        {"toPage": 6, "text": "Probeer de geheime ingang te vinden"}
-      ]
-    },
-    {
-      "story": "Je blijft standvastig, maar de wachters vertrouwen je niet. Ze sturen je weg.",
-      "options": [
-        {"toPage": 4, "text": "Naar het dorp gaan"},
-        {"toPage": 6, "text": "Toch een geheime ingang zoeken"}
-      ]
-    },
-    {
-      "story": "Binnen de geheime ingang vind je een trappengang die naar een archief lijkt te leiden.",
-      "options": [
-        {"toPage": 17, "text": "De trap af"},
-        {"toPage": 18, "text": "Eerst luisteren of er iemand is"}
-      ]
-    },
-    {
-      "story": "Je keert terug naar de poort, maar de wachters lijken geïrriteerd.",
-      "options": [
-        {"toPage": 11, "text": "Wegvluchten"},
-        {"toPage": 3, "text": "Toch je verhaal opnieuw proberen"}
-      ]
-    },
-    {
-      "story": "De waard fluistert: het document bevat kennis die eeuwen vooruit loopt op deze tijd. Het ligt in de archiefruimte onder het kasteel.",
-      "options": [
-        {"toPage": 2, "text": "Naar het kasteel"},
-        {"toPage": 17, "text": "Zoek de geheime ingang op"}
-      ]
-    },
-    {
-      "story": "De twee fluisterende figuren blijken stropers te zijn. Ze eisen dat je hen betaalt.",
-      "options": [
-        {"toPage": 11, "text": "Wegrennen"},
-        {"toPage": 19, "text": "Onderhandelen"}
-      ]
-    },
-    {
-      "story": "Je daalt de trap af en komt in een stoffige archiefruimte vol perkamentrollen.",
-      "options": [
-        {"toPage": 20, "text": "Het document zoeken"},
-        {"toPage": 18, "text": "Eerst de omgeving scannen"}
-      ]
-    },
-    {
-      "story": "Je hoort voetstappen. Een archivaris lijkt eraan te komen.",
-      "options": [
-        {"toPage": 21, "text": "Verstoppen"},
-        {"toPage": 22, "text": "Openlijk met hem praten"}
-      ]
-    },
-    {
-      "story": "De stropers luisteren naar je uitleg. Ze blijken het kasteel te kennen en geven je een aanwijzing.",
-      "options": [
-        {"toPage": 6, "text": "Geheime route naar het kasteel nemen"},
-        {"toPage": 17, "text": "Direct de geheime ingang opzoeken"}
-      ]
-    },
-    {
-      "story": "Je zoekt tussen de rollen en vindt uiteindelijk een document met een glimmend zegel. De tekst lijkt te kloppen met de beschrijving uit de toekomst.",
-      "options": [
-        {"toPage": 23, "text": "Document meenemen en vertrekken"},
-        {"toPage": 24, "text": "Dubbelcheck om zeker te zijn"}
-      ]
-    },
-    {
-      "story": "De archivaris schrikt, maar je verhaal overtuigt hem. Hij is bereid je te helpen.",
-      "options": [
-        {"toPage": 23, "text": "Snel het document pakken"},
-        {"toPage": 25, "text": "Nog iets extra’s vragen"}
-      ]
-    },
-    {
-      "story": "Je probeert je te verstoppen, maar struikelt. De archivaris alarmeert de wachters.",
-      "options": [
-        {"toPage": 26, "text": "EINDE – Slecht einde 1: Je wordt opgepakt en mist je teleporteermoment."}
-      ]
-    },
-    {
-      "story": "Je onderzoekt het document grondig, maar door tijdverlies begint je timer gevaarlijk laag te worden.",
-      "options": [
-        {"toPage": 23, "text": "Het document alsnog meenemen"},
-        {"toPage": 27, "text": "Alles opnieuw doorzoeken"}
-      ]
-    },
-    {
-      "story": "Je vraagt de archivaris of hij weet waar een tweede document ligt. Hij knikt, maar het pad ernaartoe is riskant.",
-      "options": [
-        {"toPage": 28, "text": "Het risico nemen"},
-        {"toPage": 23, "text": "Maar toch het eerste document meenemen"}
-      ]
-    },
-    {
-      "story": "Je doorzoekt alles opnieuw, maar je timer loopt af en je wordt direct teruggeteleporteerd zonder iets in handen te hebben.",
-      "options": [
-        {"toPage": 29, "text": "EINDE – Slecht einde 2: Missie mislukt."}
-      ]
-    },
-    {
-      "story": "Je volgt de archivaris door een nauwe doorgang naar een geheime kamer. Daar ligt een tweede document met nóg meer waarde.",
-      "options": [
-        {"toPage": 30, "text": "EINDE – Goed einde 1: Je keert terug met het zeldzame document en redt de toekomst!"},
-        {"toPage": 23, "text": "Toch het eerste document kiezen voor veiligheid"}
-      ]
-    },
-    {
-      "story": "Je rent met het document naar buiten, net wanneer je timer op nul springt. Je voelt de teleportatie opstarten.",
-      "options": [
-        {"toPage": 31, "text": "EINDE – Goed einde 2: Je slaagt en brengt het juiste document veilig mee terug naar het heden!"}
+      "title": "De Race Tegen de Tijd",
+      "pages": [
+        {
+          "story": "Je ontwaakt in een lichtflits: je bent terug in de middeleeuwen. Je timer op je pols toont dat je nog één uur hebt voor je automatisch terugteleporteert naar het heden. Je missie: een middeleeuws document ophalen dat je toekomst kan redden.",
+          "options": [
+            {"toPage": 1, "text": "Oriënteer je in het dorp"},
+            {"toPage": 2, "text": "Zoek direct het kasteel op"}
+          ]
+        },
+        {
+          "story": "Je loopt het dorp binnen. Mensen staren kort maar gaan verder met hun werk. Een marktkoopman wenkt je.",
+          "options": [
+            {"toPage": 3, "text": "Met de koopman praten"},
+            {"toPage": 4, "text": "Verder het dorp in lopen"}
+          ]
+        },
+        {
+          "story": "Je arriveert bij de poort van het kasteel. De wachters kijken achterdochtig.",
+          "options": [
+            {"toPage": 5, "text": "Probeer je verhaal uit te leggen"},
+            {"toPage": 6, "text": "Zoek een geheime ingang"}
+          ]
+        },
+        {
+          "story": "De koopman vraagt waarom je zo'n vreemd apparaat op je pols hebt.",
+          "options": [
+            {"toPage": 7, "text": "Een leugentje vertellen"},
+            {"toPage": 8, "text": "De waarheid vertellen"}
+          ]
+        },
+        {
+          "story": "Dieper in het dorp zie je een kleine taverne en een smalle zijstraat.",
+          "options": [
+            {"toPage": 9, "text": "De taverne binnengaan"},
+            {"toPage": 10, "text": "De zijstraat in glippen"}
+          ]
+        },
+        {
+          "story": "De wachters geloven geen woord van je verhaal. Ze dreigen je gevangen te nemen.",
+          "options": [
+            {"toPage": 11, "text": "Vlucht weg"},
+            {"toPage": 12, "text": "Blijf standvastig"}
+          ]
+        },
+        {
+          "story": "Je vindt een halfverborgen doorgang achter struiken. Het lijkt naar binnen te leiden.",
+          "options": [
+            {"toPage": 13, "text": "Ga de geheime ingang binnen"},
+            {"toPage": 14, "text": "Terug naar de poort"}
+          ]
+        },
+        {
+          "story": "Je zegt dat het apparaat een nieuwe soort zonnewijzer is. De koopman lacht en vertelt over een schrijver in het kasteel die oude documenten bewaart.",
+          "options": [
+            {"toPage": 2, "text": "Naar het kasteel gaan"},
+            {"toPage": 9, "text": "Eerst naar de taverne"}
+          ]
+        },
+        {
+          "story": "Je vertelt eerlijk dat je uit de toekomst komt. De koopman schrikt, maar gelooft je opvallend snel en wijst je een 'verborgen route' naar het kasteel.",
+          "options": [
+            {"toPage": 6, "text": "De geheime route nemen"},
+            {"toPage": 4, "text": "Toch verder het dorp in"}
+          ]
+        },
+        {
+          "story": "In de taverne praat de waard zachtjes over een ‘verboden document’ dat de koning bewaart.",
+          "options": [
+            {"toPage": 15, "text": "Meer informatie vragen"},
+            {"toPage": 2, "text": "Naar het kasteel vertrekken"}
+          ]
+        },
+        {
+          "story": "In de donkere straat zie je twee mensen fluisteren. Ze stoppen meteen zodra ze je zien.",
+          "options": [
+            {"toPage": 16, "text": "Naderen en aanspreken"},
+            {"toPage": 11, "text": "Snel weggaan"}
+          ]
+        },
+        {
+          "story": "Je vlucht van de wachters weg. Je hart bonst, maar je bent veilig.",
+          "options": [
+            {"toPage": 4, "text": "Terug naar het dorp"},
+            {"toPage": 6, "text": "Probeer de geheime ingang te vinden"}
+          ]
+        },
+        {
+          "story": "Je blijft standvastig, maar de wachters vertrouwen je niet. Ze sturen je weg.",
+          "options": [
+            {"toPage": 4, "text": "Naar het dorp gaan"},
+            {"toPage": 6, "text": "Toch een geheime ingang zoeken"}
+          ]
+        },
+        {
+          "story": "Binnen de geheime ingang vind je een trappengang die naar een archief lijkt te leiden.",
+          "options": [
+            {"toPage": 17, "text": "De trap af"},
+            {"toPage": 18, "text": "Eerst luisteren of er iemand is"}
+          ]
+        },
+        {
+          "story": "Je keert terug naar de poort, maar de wachters lijken geïrriteerd.",
+          "options": [
+            {"toPage": 11, "text": "Wegvluchten"},
+            {"toPage": 3, "text": "Toch je verhaal opnieuw proberen"}
+          ]
+        },
+        {
+          "story": "De waard fluistert: het document bevat kennis die eeuwen vooruit loopt op deze tijd. Het ligt in de archiefruimte onder het kasteel.",
+          "options": [
+            {"toPage": 2, "text": "Naar het kasteel"},
+            {"toPage": 17, "text": "Zoek de geheime ingang op"}
+          ]
+        },
+        {
+          "story": "De twee fluisterende figuren blijken stropers te zijn. Ze eisen dat je hen betaalt.",
+          "options": [
+            {"toPage": 11, "text": "Wegrennen"},
+            {"toPage": 19, "text": "Onderhandelen"}
+          ]
+        },
+        {
+          "story": "Je daalt de trap af en komt in een stoffige archiefruimte vol perkamentrollen.",
+          "options": [
+            {"toPage": 20, "text": "Het document zoeken"},
+            {"toPage": 18, "text": "Eerst de omgeving scannen"}
+          ]
+        },
+        {
+          "story": "Je hoort voetstappen. Een archivaris lijkt eraan te komen.",
+          "options": [
+            {"toPage": 21, "text": "Verstoppen"},
+            {"toPage": 22, "text": "Openlijk met hem praten"}
+          ]
+        },
+        {
+          "story": "De stropers luisteren naar je uitleg. Ze blijken het kasteel te kennen en geven je een aanwijzing.",
+          "options": [
+            {"toPage": 6, "text": "Geheime route naar het kasteel nemen"},
+            {"toPage": 17, "text": "Direct de geheime ingang opzoeken"}
+          ]
+        },
+        {
+          "story": "Je zoekt tussen de rollen en vindt uiteindelijk een document met een glimmend zegel. De tekst lijkt te kloppen met de beschrijving uit de toekomst.",
+          "options": [
+            {"toPage": 23, "text": "Document meenemen en vertrekken"},
+            {"toPage": 24, "text": "Dubbelcheck om zeker te zijn"}
+          ]
+        },
+        {
+          "story": "De archivaris schrikt, maar je verhaal overtuigt hem. Hij is bereid je te helpen.",
+          "options": [
+            {"toPage": 23, "text": "Snel het document pakken"},
+            {"toPage": 25, "text": "Nog iets extra’s vragen"}
+          ]
+        },
+        {
+          "story": "Je probeert je te verstoppen, maar struikelt. De archivaris alarmeert de wachters.",
+          "options": [
+            {"toPage": 26, "text": "EINDE – Slecht einde 1: Je wordt opgepakt en mist je teleporteermoment."}
+          ]
+        },
+        {
+          "story": "Je onderzoekt het document grondig, maar door tijdverlies begint je timer gevaarlijk laag te worden.",
+          "options": [
+            {"toPage": 23, "text": "Het document alsnog meenemen"},
+            {"toPage": 27, "text": "Alles opnieuw doorzoeken"}
+          ]
+        },
+        {
+          "story": "Je vraagt de archivaris of hij weet waar een tweede document ligt. Hij knikt, maar het pad ernaartoe is riskant.",
+          "options": [
+            {"toPage": 28, "text": "Het risico nemen"},
+            {"toPage": 23, "text": "Maar toch het eerste document meenemen"}
+          ]
+        },
+        {
+          "story": "Je doorzoekt alles opnieuw, maar je timer loopt af en je wordt direct teruggeteleporteerd zonder iets in handen te hebben.",
+          "options": [
+            {"toPage": 29, "text": "EINDE – Slecht einde 2: Missie mislukt."}
+          ]
+        },
+        {
+          "story": "Je volgt de archivaris door een nauwe doorgang naar een geheime kamer. Daar ligt een tweede document met nóg meer waarde.",
+          "options": [
+            {"toPage": 30, "text": "EINDE – Goed einde 1: Je keert terug met het zeldzame document en redt de toekomst!"},
+            {"toPage": 23, "text": "Toch het eerste document kiezen voor veiligheid"}
+          ]
+        },
+        {
+          "story": "Je rent met het document naar buiten, net wanneer je timer op nul springt. Je voelt de teleportatie opstarten.",
+          "options": [
+            {"toPage": 31, "text": "EINDE – Goed einde 2: Je slaagt en brengt het juiste document veilig mee terug naar het heden!"}
+          ]
+        }
       ]
     }
   ]
