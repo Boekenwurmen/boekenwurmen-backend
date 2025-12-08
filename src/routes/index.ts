@@ -15,4 +15,9 @@ router.post('/clients/login', loginClient);
 router.post('/clients/refresh', refreshToken);
 router.post('/clients/logout', logoutClient);
 
+router.get('/books/', getBooks);
+router.get('/books/:bookId', getPages);
+router.get('/books/:bookId/:pageId', getStory);
+router.get('/books/:bookId/:pageId/options', getChoices);
+
 export default router;
