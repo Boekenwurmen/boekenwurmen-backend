@@ -60,8 +60,8 @@
         {
           "story": "De koopman vraagt waarom je zo'n vreemd apparaat op je pols hebt.",
           "options": [
-            {"toPage": 7, "name": "Een leugentje vertellen"},
-            {"toPage": 8, "name": "De waarheid vertellen"}
+            {"toPage": 7, "name": "Vertel dat je ermee kan tijdlezen"},
+            {"toPage": 8, "name": "Vertel dat je ermee kan tijdreizen"}
           ]
         },
         {
@@ -165,8 +165,8 @@
         {
           "story": "Je hoort voetstappen. Een archivaris lijkt eraan te komen.",
           "options": [
-            {"toPage": 21, "name": "Verstoppen"},
-            {"toPage": 22, "name": "Openlijk met hem praten"}
+            {"toPage": 22, "name": "Verstoppen"},
+            {"toPage": 21, "name": "Openlijk met hem praten"}
           ]
         },
         {
@@ -179,54 +179,67 @@
         {
           "story": "Je zoekt tussen de rollen en vindt uiteindelijk een document met een glimmend zegel. De tekst lijkt te kloppen met de beschrijving uit de toekomst.",
           "options": [
-            {"toPage": 23, "name": "Document meenemen en vertrekken"},
-            {"toPage": 24, "name": "Dubbelcheck om zeker te zijn"}
+            {"toPage": 27, "name": "Document meenemen en vertrekken"},
+            {"toPage": 23, "name": "Dubbelcheck om zeker te zijn"}
           ]
         },
         {
           "story": "De archivaris schrikt, maar je verhaal overtuigt hem. Hij is bereid je te helpen.",
           "options": [
-            {"toPage": 23, "name": "Snel het document pakken"},
-            {"toPage": 25, "name": "Nog iets extra’s vragen"}
+            {"toPage": 29, "name": "Snel het document pakken"},
+            {"toPage": 24, "name": "Nog iets extra’s vragen"}
           ]
         },
         {
           "story": "Je probeert je te verstoppen, maar struikelt. De archivaris alarmeert de wachters.",
           "options": [
-            {"toPage": 26, "name": "EINDE – Slecht einde 1: Je wordt opgepakt en mist je teleporteermoment."}
+            {"toPage": 100, "name": "EINDE - Slecht einde 1: Je wordt opgepakt en mist je teleporteermoment."}
           ]
         },
         {
           "story": "Je onderzoekt het document grondig, maar door tijdverlies begint je timer gevaarlijk laag te worden.",
           "options": [
-            {"toPage": 23, "name": "Het document alsnog meenemen"},
-            {"toPage": 27, "name": "Alles opnieuw doorzoeken"}
+            {"toPage": 27, "name": "Het document alsnog meenemen"},
+            {"toPage": 25, "name": "Alles opnieuw doorzoeken"}
           ]
         },
         {
           "story": "Je vraagt de archivaris of hij weet waar een tweede document ligt. Hij knikt, maar het pad ernaartoe is riskant.",
           "options": [
-            {"toPage": 28, "name": "Het risico nemen"},
-            {"toPage": 23, "name": "Maar toch het eerste document meenemen"}
+            {"toPage": 26, "name": "Het risico nemen"},
+            {"toPage": 29, "name": "Maar toch het eerste document meenemen"}
           ]
         },
         {
-          "story": "Je doorzoekt alles opnieuw, maar je timer loopt af en je wordt direct teruggeteleporteerd zonder iets in handen te hebben.",
+          "story": "Je timer loopt af en je wordt direct teruggeteleporteerd zonder iets in handen te hebben.",
           "options": [
-            {"toPage": 29, "name": "EINDE – Slecht einde 2: Missie mislukt."}
+            {"toPage": 100, "name": "EINDE - Slecht einde 2: Missie mislukt."}
           ]
         },
         {
           "story": "Je volgt de archivaris door een nauwe doorgang naar een geheime kamer. Daar ligt een tweede document met nóg meer waarde.",
           "options": [
-            {"toPage": 30, "name": "EINDE – Goed einde 1: Je keert terug met het zeldzame document en redt de toekomst!"},
-            {"toPage": 23, "name": "Toch het eerste document kiezen voor veiligheid"}
+            {"toPage": 28, "name": "Duw de archivaris opzij en grijp het document"},
+            {"toPage": 25, "name": "Volg de archivaris"}
           ]
         },
         {
           "story": "Je rent met het document naar buiten, net wanneer je timer op nul springt. Je voelt de teleportatie opstarten.",
           "options": [
-            {"toPage": 31, "name": "EINDE – Goed einde 2: Je slaagt en brengt het juiste document veilig mee terug naar het heden!"}
+            {"toPage": 100, "name": "EINDE - Goed einde 2: Je slaagt en brengt het juiste document veilig mee terug naar het heden!"}
+          ]
+        },
+        {
+          "story": "De archivaris houdt je vast, maar je weet het document te pakken te krijgen net wanneer je timer op nul springt. Je voelt de teleportatie opstarten.",
+          "options": [
+            {"toPage": 100, "name": "EINDE - Goed einde 1: Je keert terug met het zeldzame document en redt de toekomst!"}
+          ]
+        },
+        {
+          "story": "De archivaris steekt een kaars aan en pakt het eerste document.",
+          "options": [
+            {"toPage": 27, "name": "Grijp het document en ren weg"},
+            {"toPage": 24, "name": "Nog iets extra’s vragen"}
           ]
         }
       ]
