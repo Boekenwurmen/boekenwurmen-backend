@@ -44,7 +44,9 @@ export async function getBooks(req: Request, res: Response, next: NextFunction):
         title: 'Could not get the books index you requested',
         url: req.url,
       },
-      data: error
+      data: {
+        message: error
+      }
     });
   }
 }
@@ -74,7 +76,9 @@ export async function getIntroductionBook(req: Request, res: Response, next: Nex
         title: 'Could not get the introduction book index you requested',
         url: req.url,
       },
-      data: error
+      data: {
+        message: error
+      }
     });
   }
 }
@@ -88,6 +92,14 @@ export async function getIntroductionBook(req: Request, res: Response, next: Nex
 export async function getPages(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
     const { bookId } = req.params;
+    const bookIdx = Number.parseInt(bookId as string, 10);
+    if (!Number.isFinite(bookIdx) || bookIdx < 0) {
+      res.status(400).json({
+        meta: { count: 1, title: 'Invalid bookId', url: req.url },
+        data: { message: 'bookId must be a non-negative integer' }
+      });
+      return;
+    }
     const data = _toIndexes(_getPagesArrayJson(parseInt(bookId)));
     const response: Object = {
       meta: {
@@ -105,7 +117,9 @@ export async function getPages(req: Request, res: Response, next: NextFunction):
         title: 'Could not get the page index you requested',
         url: req.url,
       },
-      data: error
+      data: {
+        message: error
+      }
     });
   }
 }
@@ -136,7 +150,9 @@ export async function getBookMetadata(req: Request, res: Response, next: NextFun
         title: 'Could not get the book metadata you requested',
         url: req.url,
       },
-      data: error
+      data: {
+        message: error
+      }
     });
   }
 }
@@ -150,7 +166,16 @@ export async function getBookMetadata(req: Request, res: Response, next: NextFun
 export async function getStory(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
     const { bookId, pageId } = req.params;
-    const data = _getPageStory(parseInt(bookId), parseInt(pageId));
+    const bookIdx = Number.parseInt(bookId as string, 10);
+    const pageIdx = Number.parseInt(pageId as string, 10);
+    if (!Number.isFinite(bookIdx) || !Number.isFinite(pageIdx) || bookIdx < 0 || pageIdx < 0) {
+      res.status(400).json({
+        meta: { count: 1, title: 'Invalid parameters', url: req.url },
+        data: { message: 'bookId and pageId must be non-negative integers' }
+      });
+      return;
+    }
+    const data = _getPageStory(bookIdx, pageIdx);
     const response: Object = {
       meta: {
         count: 1,
@@ -183,7 +208,16 @@ export async function getStory(req: Request, res: Response, next: NextFunction):
 export async function getChoices(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
     const { bookId, pageId } = req.params;
-    const data = _getPageOptions(parseInt(bookId), parseInt(pageId));
+    const bookIdx = Number.parseInt(bookId as string, 10);
+    const pageIdx = Number.parseInt(pageId as string, 10);
+    if (!Number.isFinite(bookIdx) || !Number.isFinite(pageIdx) || bookIdx < 0 || pageIdx < 0) {
+      res.status(400).json({
+        meta: { count: 1, title: 'Invalid parameters', url: req.url },
+        data: { message: 'bookId and pageId must be non-negative integers' }
+      });
+      return;
+    }
+    const data = _getPageOptions(bookIdx, pageIdx);
     const response: Object = {
       meta: {
         count: 1,
@@ -202,7 +236,9 @@ export async function getChoices(req: Request, res: Response, next: NextFunction
         title: 'Could not get the choices you requested',
         url: req.url,
       },
-      data: error
+      data: {
+        message: error
+      }
     });
   }
 }
