@@ -1,15 +1,22 @@
 import Express, { Router } from 'express';
-import { getClient, getClients } from '../controllers/clientsController.js';
-import { getBooks, getChoices, getPages, getStory } from '../controllers/booksController.ts';
-
+import { getClient, getClients, createClient, updateClient, loginClient, refreshToken, logoutClient } from '../controllers/clientsController.js';
+import { requireAuth } from '../middleware/auth.js';
+import { getBooks, getPages, getStory, getChoices } from '../controllers/booksController.ts';
 const router: Router = Express.Router();
 
 // router.get('/', (req: Request, res: Response, next: NextFunction) => {
 //   res.json('hi');
 //   next();
 // });
-router.get('/clients', getClients);
+// Define login before parameterized routes to avoid '/clients/login' matching ':id'
+router.post('/clients/login', loginClient);
+router.get('/clients', requireAuth, getClients);
+// Allow public read of a single client (sanitized to id+name only)
 router.get('/clients/:id', getClient);
+router.post('/clients', createClient);
+router.patch('/clients/:id', updateClient);
+router.post('/clients/refresh', refreshToken);
+router.post('/clients/logout', logoutClient);
 
 router.get('/books/', getBooks);
 router.get('/books/:bookId', getPages);

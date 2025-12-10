@@ -11,7 +11,7 @@ interface Client {
   id?: number,
   createdAt?: Date,
   name: string,
-  email: string,
+  code?: string,
 }
 
 export { Client };
