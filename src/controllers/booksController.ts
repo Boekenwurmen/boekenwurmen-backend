@@ -27,7 +27,7 @@ interface ClientResponse {
  */
 export async function getBooks(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
-    const data = _toIndexes(_getBooksArrayJson());
+    const data = _getBookRoutesJson();
     const response: Object = {
       meta: {
         count: data.length,
@@ -271,6 +271,12 @@ function _getBookMetadataJson(bookId:number | null | undefined) {
 
 function _getBooksArrayJson() {
   return booksData?.default?.books;
+}
+
+function _getBookRoutesJson() {
+  const bookIndexes = _toIndexes(_getBooksArrayJson());
+  const introductionBook = _getIntroductionBookJson();
+  return bookIndexes.filter((_, i) => i !== introductionBook);
 }
 
 function _getIntroductionBookJson() {
