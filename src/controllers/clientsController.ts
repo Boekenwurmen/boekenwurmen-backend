@@ -51,11 +51,11 @@ export async function getClient(req: Request, res: Response, next: NextFunction)
         id: id
       }
     });
-    console.log('client:', client);
     if (!client) {
       throw new Error('Client not found', { cause: 404 });
     }
-    res.json({ success: true, client });
+    // Only expose public fields
+    res.json({ success: true, client: { id: client.id, name: client.name } });
   } catch (err) {
     next(err); // forwards to error handler
   }
@@ -96,8 +96,9 @@ export async function updateClient(req: Request, res: Response, next: NextFuncti
     const { code } = req.body as Partial<Client>;
     const data: Partial<Pick<Client, 'code'>> = {};
     if (typeof code === 'string') {
-      if (code.length < 8) {
-        res.status(400).json({ success: false, message: 'Code must be at least 8 characters long' });
+      const minLen = Number.parseInt(process.env.CLIENT_CODE_MIN_LENGTH ?? '4', 10);
+      if (code.length < minLen) {
+        res.status(400).json({ success: false, message: `Code must be at least ${minLen} characters long` });
         return;
       }
       const hash = await bcrypt.hash(code, 10);

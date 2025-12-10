@@ -192,3 +192,4 @@ build/
 *.drawio.bkp
 *.drawio.dtmp
 /prisma/prisma
+*.db
