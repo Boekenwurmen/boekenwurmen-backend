@@ -1,245 +1,311 @@
 {
   "books": [
     {
-      "title": "test 1",
+      "title": "introductie",
+      "description": "introductieverhaal",
+      "author": "Gijs Borghouts",
+      "cover_image_url": "https://tenor.com/view/rat-dancing-rat-dancing-gif-24339527",
+      "creation_date": "1-11-2025",
+      "category": "fiction",
       "pages": [
         {
-          "story": "dit is een verhaal",
+          "story": "You walk through a sandy, windy desert. The wind blows sand in your eyes and you fall to the ground.",
+          "type": "page",
           "options": [
-            {"toPage": 1, "name": "doe dit"},
-            {"toPage": 3, "name": "of doe dat"}
+            {"toPage":2, "type":"page", "name":"You hit the ground out of frustation"},
+            {"toPage":1, "type":"page", "name":"You scream in pain from the sand in your eyes"}
           ]
         },
         {
-          "story": "dit is een verhaal",
+          "story": "You start screaming into the vast empty desert. While screaming you feel yourself slowely sinking into the ground when all of a sudden you fall through the ground! You hit the ground hard and hurt yourself.",
+          "type": "page",
           "options": [
-            {"toPage": 1, "name": "doe dit"},
-            {"toPage": 3, "name": "of doe dat"}
+            {"toPage":6, "type":"page", "name":"Check yourself for wounds"},
+            {"toPage":5, "type":"page", "name":"look around to see where you are"}
           ]
         },
         {
-          "story": "dit is een verhaal",
+          "story": "As soon as you hit the ground you feel a wooden hatch beneath you. It feels old and rotten. Yet when you put your ear to the hatch you hear running water. As you hear the water your throat starts to dry up you have not drank anything for about a day...",
+          "type": "page",
           "options": [
-            {"toPage": 1, "name": "doe dit"},
-            {"toPage": 3, "name": "of doe dat"}
+            {"toPage":4, "type":"page", "name":"You ignore the hatch and wander into the desert"},
+            {"toPage":3, "type":"page", "name":"You open the hatch and go inside"}
           ]
         },
         {
-          "story": "dit is een verhaal",
+          "story": "You enter what seems to be a library with a bit of running water. You take a drink and start looking around but all the books you see you can't read...",
+          "type": "page",
           "options": [
-            {"toPage": 1, "name": "doe dit"},
-            {"toPage": 3, "name": "of doe dat"}
+            {"toPage":0, "type":"ending", "name":"Enter library"}
+          ]
+        },
+        {
+          "story": "As you wander further you become more and more thirsty and start seeing things that aren’t there... After five more hours of wandering in the heat of the desert you fall to the ground. You fall asleep not to wake up again... ",
+          "type": "page",
+          "options": [
+            {"toPage":0, "type":"ending", "name":"Enter library"}
+          ]
+        },
+        {
+          "story": "As you look around you see the running water and take a sip. behind all the water you see a old library filled with books you can’t read...",
+          "type": "page",
+          "options": [
+            {"toPage": 1, "type": "page", "name": "doe dit"},
+            {"toPage": 3, "type": "page", "name": "of doe dat"}
+          ]
+        },
+        {
+          "story": "You check your leg and see it bleeding. You rip off a piece of your shirt and after you clean the wound with the running water you see, you make a makeshift bandage. Now that you’ve treated your wound you start to look around and see an old library filled with books you can’t read....",
+          "type": "page",
+          "options": [
+            {"toPage": 1, "type": "page", "name": "doe dit"},
+            {"toPage": 3, "type": "page", "name": "of doe dat"}
           ]
         }
       ]
     },
     {
       "title": "De Race Tegen de Tijd",
+      "description": "Een tijdreiziger wordt in de middeleeuwen gekatapulteerd met slechts één uur om een geheim document te vinden dat de toekomst kan redden. Elke keuze telt, want wanneer de timer afloopt, verdwijn je terug naar het heden.",
+      "author": "ChatGPT",
+      "cover_image_url": "https://tenor.com/view/rat-dancing-rat-dancing-gif-24339527",
+      "creation_date": "8-12-2025",
+      "category": "fiction",
       "pages": [
         {
           "story": "Je ontwaakt in een lichtflits: je bent terug in de middeleeuwen. Je timer op je pols toont dat je nog één uur hebt voor je automatisch terugteleporteert naar het heden. Je missie: een middeleeuws document ophalen dat je toekomst kan redden.",
+          "type": "page",
           "options": [
-            {"toPage": 1, "name": "Oriënteer je in het dorp"},
-            {"toPage": 2, "name": "Zoek direct het kasteel op"}
+            {"toPage": 1, "type": "page", "name": "Oriënteer je in het dorp"},
+            {"toPage": 2, "type": "page", "name": "Zoek direct het kasteel op"}
           ]
         },
         {
           "story": "Je loopt het dorp binnen. Mensen staren kort maar gaan verder met hun werk. Een marktkoopman wenkt je.",
+          "type": "page",
           "options": [
-            {"toPage": 3, "name": "Met de koopman praten"},
-            {"toPage": 4, "name": "Verder het dorp in lopen"}
+            {"toPage": 3, "type": "page", "name": "Met de koopman praten"},
+            {"toPage": 4, "type": "page", "name": "Verder het dorp in lopen"}
           ]
         },
         {
           "story": "Je arriveert bij de poort van het kasteel. De wachters kijken achterdochtig.",
+          "type": "page",
           "options": [
-            {"toPage": 5, "name": "Probeer je verhaal uit te leggen"},
-            {"toPage": 6, "name": "Zoek een geheime ingang"}
+            {"toPage": 5, "type": "page", "name": "Probeer je verhaal uit te leggen"},
+            {"toPage": 6, "type": "page", "name": "Zoek een geheime ingang"}
           ]
         },
         {
           "story": "De koopman vraagt waarom je zo'n vreemd apparaat op je pols hebt.",
+          "type": "page",
           "options": [
-            {"toPage": 7, "name": "Vertel dat je ermee kan tijdlezen"},
-            {"toPage": 8, "name": "Vertel dat je ermee kan tijdreizen"}
+            {"toPage": 7, "type": "page", "name": "Vertel dat je ermee kan tijdlezen"},
+            {"toPage": 8, "type": "page", "name": "Vertel dat je ermee kan tijdreizen"}
           ]
         },
         {
           "story": "Dieper in het dorp zie je een kleine taverne en een smalle zijstraat.",
+          "type": "page",
           "options": [
-            {"toPage": 9, "name": "De taverne binnengaan"},
-            {"toPage": 10, "name": "De zijstraat in glippen"}
+            {"toPage": 9, "type": "page", "name": "De taverne binnengaan"},
+            {"toPage": 10, "type": "page", "name": "De zijstraat in glippen"}
           ]
         },
         {
           "story": "De wachters geloven geen woord van je verhaal. Ze dreigen je gevangen te nemen.",
+          "type": "page",
           "options": [
-            {"toPage": 11, "name": "Vlucht weg"},
-            {"toPage": 12, "name": "Blijf standvastig"}
+            {"toPage": 11, "type": "page", "name": "Vlucht weg"},
+            {"toPage": 12, "type": "page", "name": "Blijf standvastig"}
           ]
         },
         {
           "story": "Je vindt een halfverborgen doorgang achter struiken. Het lijkt naar binnen te leiden.",
+          "type": "page",
           "options": [
-            {"toPage": 13, "name": "Ga de geheime ingang binnen"},
-            {"toPage": 14, "name": "Terug naar de poort"}
+            {"toPage": 13, "type": "page", "name": "Ga de geheime ingang binnen"},
+            {"toPage": 14, "type": "page", "name": "Terug naar de poort"}
           ]
         },
         {
           "story": "Je zegt dat het apparaat een nieuwe soort zonnewijzer is. De koopman lacht en vertelt over een schrijver in het kasteel die oude documenten bewaart.",
+          "type": "page",
           "options": [
-            {"toPage": 2, "name": "Naar het kasteel gaan"},
-            {"toPage": 9, "name": "Eerst naar de taverne"}
+            {"toPage": 2, "type": "page", "name": "Naar het kasteel gaan"},
+            {"toPage": 9, "type": "page", "name": "Eerst naar de taverne"}
           ]
         },
         {
           "story": "Je vertelt eerlijk dat je uit de toekomst komt. De koopman schrikt, maar gelooft je opvallend snel en wijst je een 'verborgen route' naar het kasteel.",
+          "type": "page",
           "options": [
-            {"toPage": 6, "name": "De geheime route nemen"},
-            {"toPage": 4, "name": "Toch verder het dorp in"}
+            {"toPage": 6, "type": "page", "name": "De geheime route nemen"},
+            {"toPage": 4, "type": "page", "name": "Toch verder het dorp in"}
           ]
         },
         {
           "story": "In de taverne praat de waard zachtjes over een ‘verboden document’ dat de koning bewaart.",
+          "type": "page",
           "options": [
-            {"toPage": 15, "name": "Meer informatie vragen"},
-            {"toPage": 2, "name": "Naar het kasteel vertrekken"}
+            {"toPage": 15, "type": "page", "name": "Meer informatie vragen"},
+            {"toPage": 2, "type": "page", "name": "Naar het kasteel vertrekken"}
           ]
         },
         {
           "story": "In de donkere straat zie je twee mensen fluisteren. Ze stoppen meteen zodra ze je zien.",
+          "type": "page",
           "options": [
-            {"toPage": 16, "name": "Naderen en aanspreken"},
-            {"toPage": 11, "name": "Snel weggaan"}
+            {"toPage": 16, "type": "page", "name": "Naderen en aanspreken"},
+            {"toPage": 11, "type": "page", "name": "Snel weggaan"}
           ]
         },
         {
           "story": "Je vlucht van de wachters weg. Je hart bonst, maar je bent veilig.",
+          "type": "page",
           "options": [
-            {"toPage": 4, "name": "Terug naar het dorp"},
-            {"toPage": 6, "name": "Probeer de geheime ingang te vinden"}
+            {"toPage": 4, "type": "page", "name": "Terug naar het dorp"},
+            {"toPage": 6, "type": "page", "name": "Probeer de geheime ingang te vinden"}
           ]
         },
         {
           "story": "Je blijft standvastig, maar de wachters vertrouwen je niet. Ze sturen je weg.",
+          "type": "page",
           "options": [
-            {"toPage": 4, "name": "Naar het dorp gaan"},
-            {"toPage": 6, "name": "Toch een geheime ingang zoeken"}
+            {"toPage": 4, "type": "page", "name": "Naar het dorp gaan"},
+            {"toPage": 6, "type": "page", "name": "Toch een geheime ingang zoeken"}
           ]
         },
         {
           "story": "Binnen de geheime ingang vind je een trappengang die naar een archief lijkt te leiden.",
+          "type": "page",
           "options": [
-            {"toPage": 17, "name": "De trap af"},
-            {"toPage": 18, "name": "Eerst luisteren of er iemand is"}
+            {"toPage": 17, "type": "page", "name": "De trap af"},
+            {"toPage": 18, "type": "page", "name": "Eerst luisteren of er iemand is"}
           ]
         },
         {
           "story": "Je keert terug naar de poort, maar de wachters lijken geïrriteerd.",
+          "type": "page",
           "options": [
-            {"toPage": 11, "name": "Wegvluchten"},
-            {"toPage": 3, "name": "Toch je verhaal opnieuw proberen"}
+            {"toPage": 11, "type": "page", "name": "Wegvluchten"},
+            {"toPage": 3, "type": "page", "name": "Toch je verhaal opnieuw proberen"}
           ]
         },
         {
           "story": "De waard fluistert: het document bevat kennis die eeuwen vooruit loopt op deze tijd. Het ligt in de archiefruimte onder het kasteel.",
+          "type": "page",
           "options": [
-            {"toPage": 2, "name": "Naar het kasteel"},
-            {"toPage": 17, "name": "Zoek de geheime ingang op"}
+            {"toPage": 2, "type": "page", "name": "Naar het kasteel"},
+            {"toPage": 17, "type": "page", "name": "Zoek de geheime ingang op"}
           ]
         },
         {
           "story": "De twee fluisterende figuren blijken stropers te zijn. Ze eisen dat je hen betaalt.",
+          "type": "page",
           "options": [
-            {"toPage": 11, "name": "Wegrennen"},
-            {"toPage": 19, "name": "Onderhandelen"}
+            {"toPage": 11, "type": "page", "name": "Wegrennen"},
+            {"toPage": 19, "type": "page", "name": "Onderhandelen"}
           ]
         },
         {
           "story": "Je daalt de trap af en komt in een stoffige archiefruimte vol perkamentrollen.",
+          "type": "page",
           "options": [
-            {"toPage": 20, "name": "Het document zoeken"},
-            {"toPage": 18, "name": "Eerst de omgeving scannen"}
+            {"toPage": 20, "type": "page", "name": "Het document zoeken"},
+            {"toPage": 18, "type": "page", "name": "Eerst de omgeving scannen"}
           ]
         },
         {
           "story": "Je hoort voetstappen. Een archivaris lijkt eraan te komen.",
+          "type": "page",
           "options": [
-            {"toPage": 22, "name": "Verstoppen"},
-            {"toPage": 21, "name": "Openlijk met hem praten"}
+            {"toPage": 22, "type": "page", "name": "Verstoppen"},
+            {"toPage": 21, "type": "page", "name": "Openlijk met hem praten"}
           ]
         },
         {
           "story": "De stropers luisteren naar je uitleg. Ze blijken het kasteel te kennen en geven je een aanwijzing.",
+          "type": "page",
           "options": [
-            {"toPage": 6, "name": "Geheime route naar het kasteel nemen"},
-            {"toPage": 17, "name": "Direct de geheime ingang opzoeken"}
+            {"toPage": 6, "type": "page", "name": "Geheime route naar het kasteel nemen"},
+            {"toPage": 17, "type": "page", "name": "Direct de geheime ingang opzoeken"}
           ]
         },
         {
           "story": "Je zoekt tussen de rollen en vindt uiteindelijk een document met een glimmend zegel. De tekst lijkt te kloppen met de beschrijving uit de toekomst.",
+          "type": "page",
           "options": [
-            {"toPage": 27, "name": "Document meenemen en vertrekken"},
-            {"toPage": 23, "name": "Dubbelcheck om zeker te zijn"}
+            {"toPage": 27, "type": "page", "name": "Document meenemen en vertrekken"},
+            {"toPage": 23, "type": "page", "name": "Dubbelcheck om zeker te zijn"}
           ]
         },
         {
           "story": "De archivaris schrikt, maar je verhaal overtuigt hem. Hij is bereid je te helpen.",
+          "type": "page",
           "options": [
-            {"toPage": 29, "name": "Snel het document pakken"},
-            {"toPage": 24, "name": "Nog iets extra’s vragen"}
+            {"toPage": 29, "type": "page", "name": "Snel het document pakken"},
+            {"toPage": 24, "type": "page", "name": "Nog iets extra’s vragen"}
           ]
         },
         {
           "story": "Je probeert je te verstoppen, maar struikelt. De archivaris alarmeert de wachters.",
+          "type": "page",
           "options": [
-            {"toPage": 100, "name": "EINDE - Slecht einde 1: Je wordt opgepakt en mist je teleporteermoment."}
+            {"toPage": 0, "type": "ending", "name": "Slecht einde 1: Je wordt opgepakt en mist je teleporteermoment."}
           ]
         },
         {
           "story": "Je onderzoekt het document grondig, maar door tijdverlies begint je timer gevaarlijk laag te worden.",
+          "type": "page",
           "options": [
-            {"toPage": 27, "name": "Het document alsnog meenemen"},
-            {"toPage": 25, "name": "Alles opnieuw doorzoeken"}
+            {"toPage": 27, "type": "page", "name": "Het document alsnog meenemen"},
+            {"toPage": 25, "type": "page", "name": "Alles opnieuw doorzoeken"}
           ]
         },
         {
           "story": "Je vraagt de archivaris of hij weet waar een tweede document ligt. Hij knikt, maar het pad ernaartoe is riskant.",
+          "type": "page",
           "options": [
-            {"toPage": 26, "name": "Het risico nemen"},
-            {"toPage": 29, "name": "Maar toch het eerste document meenemen"}
+            {"toPage": 26, "type": "page", "name": "Het risico nemen"},
+            {"toPage": 29, "type": "page", "name": "Maar toch het eerste document meenemen"}
           ]
         },
         {
           "story": "Je timer loopt af en je wordt direct teruggeteleporteerd zonder iets in handen te hebben.",
+          "type": "page",
           "options": [
-            {"toPage": 100, "name": "EINDE - Slecht einde 2: Missie mislukt."}
+            {"toPage": 0, "type": "ending", "name": "Slecht einde 2: Missie mislukt."}
           ]
         },
         {
           "story": "Je volgt de archivaris door een nauwe doorgang naar een geheime kamer. Daar ligt een tweede document met nóg meer waarde.",
+          "type": "page",
           "options": [
-            {"toPage": 28, "name": "Duw de archivaris opzij en grijp het document"},
-            {"toPage": 25, "name": "Volg de archivaris"}
+            {"toPage": 28, "type": "page", "name": "Duw de archivaris opzij en grijp het document"},
+            {"toPage": 25, "type": "page", "name": "Volg de archivaris"}
           ]
         },
         {
           "story": "Je rent met het document naar buiten, net wanneer je timer op nul springt. Je voelt de teleportatie opstarten.",
+          "type": "page",
           "options": [
-            {"toPage": 100, "name": "EINDE - Goed einde 2: Je slaagt en brengt het juiste document veilig mee terug naar het heden!"}
+            {"toPage": 0, "type": "ending", "name": "Goed einde 2: Je slaagt en brengt het juiste document veilig mee terug naar het heden!"}
           ]
         },
         {
           "story": "De archivaris houdt je vast, maar je weet het document te pakken te krijgen net wanneer je timer op nul springt. Je voelt de teleportatie opstarten.",
+          "type": "page",
           "options": [
-            {"toPage": 100, "name": "EINDE - Goed einde 1: Je keert terug met het zeldzame document en redt de toekomst!"}
+            {"toPage": 0, "type": "ending", "name": "Goed einde 1: Je keert terug met het zeldzame document en redt de toekomst!"}
           ]
         },
         {
           "story": "De archivaris steekt een kaars aan en pakt het eerste document.",
+          "type": "page",
           "options": [
-            {"toPage": 27, "name": "Grijp het document en ren weg"},
-            {"toPage": 24, "name": "Nog iets extra’s vragen"}
+            {"toPage": 27, "type": "page", "name": "Grijp het document en ren weg"},
+            {"toPage": 24, "type": "page", "name": "Nog iets extra’s vragen"}
           ]
         }
       ]
