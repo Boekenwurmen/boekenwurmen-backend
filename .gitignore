@@ -191,5 +191,4 @@ build/
 # drawio temp files
 *.drawio.bkp
 *.drawio.dtmp
-/prisma/prisma
-*.db
+/prisma/prisma*.db
