@@ -1,12 +1,14 @@
 {
   "introduction_book": {
-    "title": "The Foreign Library",
-    "description": "introductieverhaal",
-    "author": "Gijs Borghouts",
-    "co_authors": ["Boaz Crezee"],
-    "cover_image_url": "https://tenor.com/view/rat-dancing-rat-dancing-gif-24339527",
-    "creation_date": "1-11-2025",
-    "category": "fiction",
+    "metadata":{
+      "title": "The Foreign Library",
+      "description": "introductieverhaal",
+      "author": "Gijs Borghouts",
+      "co_authors": ["Boaz Crezee"],
+      "cover_image_url": "https://tenor.com/view/rat-dancing-rat-dancing-gif-24339527",
+      "creation_date": "1-11-2025",
+      "category": "fiction"
+    },
     "pages": [
       {
         "story": "You walk through a sandy, windy desert. The wind blows sand in your eyes and you fall to the ground.",
@@ -150,13 +152,15 @@
   },
   "books": [
     {
-      "title": "De Race Tegen de Tijd",
-      "description": "Een tijdreiziger wordt in de middeleeuwen gekatapulteerd met slechts één uur om een geheim document te vinden dat de toekomst kan redden. Elke keuze telt, want wanneer de timer afloopt, verdwijn je terug naar het heden.",
-      "author": "ChatGPT",
-      "co_authors": ["Boaz Crezee"],
-      "cover_image_url": "https://tenor.com/view/rat-dancing-rat-dancing-gif-24339527",
-      "creation_date": "8-12-2025",
-      "category": "fiction",
+      "metadata":{
+        "title": "De Race Tegen de Tijd",
+        "description": "Een tijdreiziger wordt in de middeleeuwen gekatapulteerd met slechts één uur om een geheim document te vinden dat de toekomst kan redden. Elke keuze telt, want wanneer de timer afloopt, verdwijn je terug naar het heden.",
+        "author": "ChatGPT",
+        "co_authors": ["Boaz Crezee"],
+        "cover_image_url": "https://tenor.com/view/rat-dancing-rat-dancing-gif-24339527",
+        "creation_date": "8-12-2025",
+        "category": "fiction"
+      },
       "pages": [
         {
           "story": "Je ontwaakt in een lichtflits: je bent terug in de middeleeuwen. Je timer op je pols toont dat je nog één uur hebt voor je automatisch terugteleporteert naar het heden. Je missie: een middeleeuws document ophalen dat je toekomst kan redden.",

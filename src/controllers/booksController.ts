@@ -27,16 +27,14 @@ interface ClientResponse {
  */
 export async function getBooks(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
-    const data = "0";
+    const data = _toIndexes(_getBooksArrayJson());
     const response: Object = {
       meta: {
-        count: 1,
+        count: data.length,
         title: 'book index',
         url: req.url,
       },
-      data: {
-        books: data,
-      }
+      data: data,
     }
     res.status(200).json(response);
   } catch (error) {
@@ -59,16 +57,15 @@ export async function getBooks(req: Request, res: Response, next: NextFunction):
  */
 export async function getPages(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
-    const data = "0, 1, 2, 3, 4, 5, 6, 7";
+    const { bookId } = req.params;
+    const data = _toIndexes(_getPagesArrayJson(parseInt(bookId)));
     const response: Object = {
       meta: {
-        count: 1,
+        count: data.length,
         title: 'page index',
         url: req.url,
       },
-      data: {
-        books: data,
-      }
+      data: data,
     }
     res.status(200).json(response);
   } catch (error) {
@@ -76,6 +73,37 @@ export async function getPages(req: Request, res: Response, next: NextFunction):
       meta: {
         count: 1,
         title: 'Could not get the page index you requested',
+        url: req.url,
+      },
+      data: error
+    });
+  }
+}
+
+/**
+ * Function to get all book page indexes
+ * @param {Request} req The Request object
+ * @param {Response} res The Response object
+ * @returns {Promise<Object>}
+ */
+export async function getBookMetadata(req: Request, res: Response, next: NextFunction): Promise<void> {
+  try {
+    const { bookId } = req.params;
+    const data = _getBookMetadataJson(parseInt(bookId));
+    const response: Object = {
+      meta: {
+        count: 1,
+        title: 'book metadata',
+        url: req.url,
+      },
+      data: data,
+    }
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(503).json({
+      meta: {
+        count: 1,
+        title: 'Could not get the book metadata you requested',
         url: req.url,
       },
       data: error
@@ -169,10 +197,33 @@ function _getPageOptionsJson(bookId:number | null | undefined, pageId:number | n
   ];
 }
 
-function _getPageJson(bookId:number | null | undefined, pageId:number | null | undefined) {
-  const booksArray = booksData?.default?.books;
+function _getBookMetadataJson(bookId:number | null | undefined) {
+  const book = _getBookJson(bookId);
+  const metadata = book?.metadata;
+  return metadata ?? null;
+}
+
+function _getBooksArrayJson() {
+  return booksData?.default?.books;
+}
+
+function _getBookJson(bookId: number) {
+  const booksArray = _getBooksArrayJson();
   const book = booksArray[bookId];
+  return book;
+}
+
+function _getPagesArrayJson(bookId: number) {
+  const book = _getBookJson(bookId);
+  return book?.pages ?? null;
+}
+
+function _getPageJson(bookId:number | null | undefined, pageId:number | null | undefined) {
+  const book = _getBookJson(bookId);
   const page = book?.pages[pageId];
   return page ?? null;
 }
 
+function _toIndexes(array:any[]):string[] {
+  return array.map((e,i)=>`/${i}`);
+}
