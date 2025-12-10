@@ -1,156 +1,157 @@
 {
-  "introduction_book": {
-    "metadata":{
-      "title": "The Foreign Library",
-      "description": "introductieverhaal",
-      "author": "Gijs Borghouts",
-      "co_authors": ["Boaz Crezee"],
-      "cover_image_url": "https://tenor.com/view/rat-dancing-rat-dancing-gif-24339527",
-      "creation_date": "1-11-2025",
-      "category": "fiction"
-    },
-    "pages": [
-      {
-        "story": "You walk through a sandy, windy desert. The wind blows sand in your eyes and you fall to the ground.",
-        "type": "page",
-        "options": [
-          {"toPage":2, "type":"page", "name":"You hit the ground out of frustration"},
-          {"toPage":1, "type":"page", "name":"You scream in pain from the sand in your eyes"}
-        ]
-      },
-      {
-        "story": "You start screaming into the vast empty desert. While screaming you feel yourself slowely sinking into the ground when all of a sudden you fall through the ground! You hit the ground hard and hurt yourself.",
-        "type": "page",
-        "options": [
-          {"toPage":6, "type":"page", "name":"Check yourself for wounds"},
-          {"toPage":5, "type":"page", "name":"Look around to see where you are"}
-        ]
-      },
-      {
-        "story": "As soon as you hit the ground you feel a wooden hatch beneath you. It feels old and rotten. Yet when you put your ear to the hatch you hear running water. As you hear the water your throat starts to dry up you have not drank anything for about a day...",
-        "type": "page",
-        "options": [
-          {"toPage":4, "type":"page", "name":"You ignore the hatch and wander into the desert"},
-          {"toPage":3, "type":"page", "name":"You open the hatch and go inside"}
-        ]
-      },
-      {
-        "story": "You enter what seems to be a library with a bit of running water. You take a drink and start looking around but all the books you see you can't read...",
-        "type": "page",
-        "options": [
-          {"toPage":7, "type":"page", "name":"Enter library"}
-        ]
-      },
-      {
-        "story": "As you wander further you become more and more thirsty and start seeing things that aren’t there... After five more hours of wandering in the heat of the desert you fall to the ground. You fall asleep not to wake up again...",
-        "type": "page",
-        "options": [
-          {"toPage":0, "type": "bad ending", "name":"Go back"}
-        ]
-      },
-      {
-        "story": "As you look around you see the running water and take a sip. behind all the water you see a old library filled with books you can’t read...",
-        "type": "page",
-        "options": [
-          {"toPage":7, "type": "page", "name":"Enter library"}
-        ]
-      },
-      {
-        "story": "You check your leg and see it bleeding. You rip off a piece of your shirt and after you clean the wound with the running water you see, you make a makeshift bandage. Now that you’ve treated your wound you start to look around and see an old library filled with books you can’t read...",
-        "type": "page",
-        "options": [
-          {"toPage":7, "type": "page", "name":"Enter library"}
-        ]
-      },
-      {
-        "story": "The library appears to be shut securely, an old librarian asks you if you have been here before.",
-        "type": "page",
-        "options": [
-          {"toPage":8, "type": "page", "name":"I'm new here"},
-          {"toPage":13, "type": "page", "name":"I've been here before"}
-        ]
-      },
-      {
-        "story": "The librarian smiles and asks for your nickname, it has to be unique.",
-        "type": "set name",
-        "options": [
-          {"toPage":10, "type": "submit", "name":"next"},
-          {"toPage":9, "type": "onError", "name":"name exists already"},
-          {"toPage":17, "type": "onError", "name":"service unavailable"}
-        ]
-      },
-      {
-        "story": "The librarian looks through the list of names. \"That's unfortunate\" he says, \"this name is taken by somebody else\".",
-        "type": "set password",
-        "options": [
-          {"toPage":8, "type": "page", "name":"go back"}
-        ]
-      },
-      {
-        "story": "The librarian asks you for a secure codeword you may use to enter again at a later moment.",
-        "type": "set password",
-        "options": [
-          {"toPage":12, "type": "submit", "name":"next"},
-          {"toPage":11, "type": "onError", "name":"bad passord"},
-          {"toPage":17, "type": "onError", "name":"service unavailable"}
-        ]
-      },
-      {
-        "story": "The librarian frowns upon hearing the codword. He says that this is far to easy to guess. Tell him a secure codeword you may use to enter again at a later moment.",
-        "type": "set password",
-        "options": [
-          {"toPage":10, "type": "page", "name":"go back"}
-        ]
-      },
-      {
-        "story": "The librarian writes down your name and scambles your code, making it unreadable, and welcomes you to the Foreign Library.",
-        "type": "page",
-        "options": [
-          {"toPage":0, "type": "to library", "name":"Enter library"}
-        ]
-      },
-      {
-        "story": "The librarian asks your name, the name you used previously.",
-        "type": "enter name",
-        "options": [
-          {"toPage":14, "type": "submit", "name":"next"},
-          {"toPage":15, "type": "onError", "name":"unknown username or password"},
-          {"toPage":17, "type": "onError", "name":"service unavailable"}
-        ]
-      },
-      {
-        "story": "The librarian asks you tell it the secure codeword used previously.",
-        "type": "enter password",
-        "options": [
-          {"toPage":16, "type": "submit", "name":"next"},
-          {"toPage":15, "type": "onError", "name":"unknown username or password"},
-          {"toPage":17, "type": "onError", "name":"service unavailable"}
-        ]
-      },
-      {
-        "story": "The librarian pulls up a register and did not find your name or the codeword is incorrect.",
-        "type": "page",
-        "options": [
-          {"toPage":13, "type": "page", "name":"Go back"}
-        ]
-      },
-      {
-        "story": "The librarian pulls up a register and Welcomes you to the Foreign Library.",
-        "type": "page",
-        "options": [
-          {"toPage":0, "type": "to library", "name":"Enter library"}
-        ]
-      },
-      {
-        "story": "The librarian started to become nervous, he appears to be looking for something, he walks away and returns ten minutes later saying that he could not find his register. He advises me to return later.",
-        "type": "page",
-        "options": [
-          {"toPage":7, "type": "page", "name":"Go back"}
-        ]
-      }
-    ]
-  },
+  "introduction_book": 0,
   "books": [
+    {
+      "metadata":{
+        "title": "The Foreign Library",
+        "description": "introductieverhaal",
+        "author": "Gijs Borghouts",
+        "co_authors": ["Boaz Crezee"],
+        "cover_image_url": "https://tenor.com/view/rat-dancing-rat-dancing-gif-24339527",
+        "creation_date": "1-11-2025",
+        "category": "fiction"
+      },
+      "pages": [
+        {
+          "story": "You walk through a sandy, windy desert. The wind blows sand in your eyes and you fall to the ground.",
+          "type": "page",
+          "options": [
+            {"toPage":2, "type":"page", "name":"You hit the ground out of frustration"},
+            {"toPage":1, "type":"page", "name":"You scream in pain from the sand in your eyes"}
+          ]
+        },
+        {
+          "story": "You start screaming into the vast empty desert. While screaming you feel yourself slowely sinking into the ground when all of a sudden you fall through the ground! You hit the ground hard and hurt yourself.",
+          "type": "page",
+          "options": [
+            {"toPage":6, "type":"page", "name":"Check yourself for wounds"},
+            {"toPage":5, "type":"page", "name":"Look around to see where you are"}
+          ]
+        },
+        {
+          "story": "As soon as you hit the ground you feel a wooden hatch beneath you. It feels old and rotten. Yet when you put your ear to the hatch you hear running water. As you hear the water your throat starts to dry up you have not drank anything for about a day...",
+          "type": "page",
+          "options": [
+            {"toPage":4, "type":"page", "name":"You ignore the hatch and wander into the desert"},
+            {"toPage":3, "type":"page", "name":"You open the hatch and go inside"}
+          ]
+        },
+        {
+          "story": "You enter what seems to be a library with a bit of running water. You take a drink and start looking around but all the books you see you can't read...",
+          "type": "page",
+          "options": [
+            {"toPage":7, "type":"page", "name":"Enter library"}
+          ]
+        },
+        {
+          "story": "As you wander further you become more and more thirsty and start seeing things that aren’t there... After five more hours of wandering in the heat of the desert you fall to the ground. You fall asleep not to wake up again...",
+          "type": "page",
+          "options": [
+            {"toPage":0, "type": "bad ending", "name":"Go back"}
+          ]
+        },
+        {
+          "story": "As you look around you see the running water and take a sip. behind all the water you see a old library filled with books you can’t read...",
+          "type": "page",
+          "options": [
+            {"toPage":7, "type": "page", "name":"Enter library"}
+          ]
+        },
+        {
+          "story": "You check your leg and see it bleeding. You rip off a piece of your shirt and after you clean the wound with the running water you see, you make a makeshift bandage. Now that you’ve treated your wound you start to look around and see an old library filled with books you can’t read...",
+          "type": "page",
+          "options": [
+            {"toPage":7, "type": "page", "name":"Enter library"}
+          ]
+        },
+        {
+          "story": "The library appears to be shut securely, an old librarian asks you if you have been here before.",
+          "type": "page",
+          "options": [
+            {"toPage":8, "type": "page", "name":"I'm new here"},
+            {"toPage":13, "type": "page", "name":"I've been here before"}
+          ]
+        },
+        {
+          "story": "The librarian smiles and asks for your nickname, it has to be unique.",
+          "type": "set name",
+          "options": [
+            {"toPage":10, "type": "submit", "name":"next"},
+            {"toPage":9, "type": "onError", "name":"name exists already"},
+            {"toPage":17, "type": "onError", "name":"service unavailable"}
+          ]
+        },
+        {
+          "story": "The librarian looks through the list of names. \"That's unfortunate\" he says, \"this name is taken by somebody else\".",
+          "type": "set password",
+          "options": [
+            {"toPage":8, "type": "page", "name":"go back"}
+          ]
+        },
+        {
+          "story": "The librarian asks you for a secure codeword you may use to enter again at a later moment.",
+          "type": "set password",
+          "options": [
+            {"toPage":12, "type": "submit", "name":"next"},
+            {"toPage":11, "type": "onError", "name":"bad passord"},
+            {"toPage":17, "type": "onError", "name":"service unavailable"}
+          ]
+        },
+        {
+          "story": "The librarian frowns upon hearing the codword. He says that this is far to easy to guess. Tell him a secure codeword you may use to enter again at a later moment.",
+          "type": "set password",
+          "options": [
+            {"toPage":10, "type": "page", "name":"go back"}
+          ]
+        },
+        {
+          "story": "The librarian writes down your name and scambles your code, making it unreadable, and welcomes you to the Foreign Library.",
+          "type": "page",
+          "options": [
+            {"toPage":0, "type": "to library", "name":"Enter library"}
+          ]
+        },
+        {
+          "story": "The librarian asks your name, the name you used previously.",
+          "type": "enter name",
+          "options": [
+            {"toPage":14, "type": "submit", "name":"next"},
+            {"toPage":15, "type": "onError", "name":"unknown username or password"},
+            {"toPage":17, "type": "onError", "name":"service unavailable"}
+          ]
+        },
+        {
+          "story": "The librarian asks you tell it the secure codeword used previously.",
+          "type": "enter password",
+          "options": [
+            {"toPage":16, "type": "submit", "name":"next"},
+            {"toPage":15, "type": "onError", "name":"unknown username or password"},
+            {"toPage":17, "type": "onError", "name":"service unavailable"}
+          ]
+        },
+        {
+          "story": "The librarian pulls up a register and did not find your name or the codeword is incorrect.",
+          "type": "page",
+          "options": [
+            {"toPage":13, "type": "page", "name":"Go back"}
+          ]
+        },
+        {
+          "story": "The librarian pulls up a register and Welcomes you to the Foreign Library.",
+          "type": "page",
+          "options": [
+            {"toPage":0, "type": "to library", "name":"Enter library"}
+          ]
+        },
+        {
+          "story": "The librarian started to become nervous, he appears to be looking for something, he walks away and returns ten minutes later saying that he could not find his register. He advises me to return later.",
+          "type": "page",
+          "options": [
+            {"toPage":7, "type": "page", "name":"Go back"}
+          ]
+        }
+      ]
+    },
     {
       "metadata":{
         "title": "De Race Tegen de Tijd",

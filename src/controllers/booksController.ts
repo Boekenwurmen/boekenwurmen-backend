@@ -50,6 +50,36 @@ export async function getBooks(req: Request, res: Response, next: NextFunction):
 }
 
 /**
+ * Function to get all book indexes
+ * @param {Request} req The Request object
+ * @param {Response} res The Response object
+ * @returns {Promise<Object>}
+ */
+export async function getIntroductionBook(req: Request, res: Response, next: NextFunction): Promise<void> {
+  try {
+    const data = `/${_getIntroductionBookJson()}`;
+    const response: Object = {
+      meta: {
+        count: 1,
+        title: 'introduction book index',
+        url: req.url,
+      },
+      data: data,
+    }
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(503).json({
+      meta: {
+        count: 1,
+        title: 'Could not get the introduction book index you requested',
+        url: req.url,
+      },
+      data: error
+    });
+  }
+}
+
+/**
  * Function to get all book page indexes
  * @param {Request} req The Request object
  * @param {Response} res The Response object
@@ -205,6 +235,10 @@ function _getBookMetadataJson(bookId:number | null | undefined) {
 
 function _getBooksArrayJson() {
   return booksData?.default?.books;
+}
+
+function _getIntroductionBookJson() {
+  return booksData?.default?.introduction_book;
 }
 
 function _getBookJson(bookId: number) {
