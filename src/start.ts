@@ -5,12 +5,17 @@ Dotenv.config({ path: '.env' });
 import IndexRouter from './routes/index.js';
 import { errorHandler } from './middleware/errors/errorHandler.js';
 import helmet from 'helmet';
+import cors from 'cors';
 
 const app: Application = Express();
-const port: number = process.env.PORT ? parseInt(process.env.PORT) : 3010;
+const port: number = process.env.PORT ? parseInt(process.env.PORT) : 3012;
 
-// security middleware
+// security + CORS middleware
 app.use(helmet());
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true,
+}));
 
 // support json encoded and url-encoded bodies, mainly used for post and update
 app.use(Express.json());
