@@ -16,10 +16,14 @@ const clients: Client[] = [
 
 const load = async (): Promise<void> => {
   try {
-    await prisma.client.createMany({
-      data: clients,
-    });
-    console.log('Added category data');
+    for (const c of clients) {
+      await prisma.client.upsert({
+        where: { name: c.name },
+        update: { code: c.code },
+        create: c,
+      });
+    }
+    console.log('Seeded clients');
   } catch (e) {
     console.error(e);
     process.exit(1);
