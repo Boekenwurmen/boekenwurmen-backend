@@ -13,7 +13,7 @@ const port: number = process.env.PORT ? parseInt(process.env.PORT) : 3012;
 // security + CORS middleware
 app.use(helmet());
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
   credentials: true,
 }));
 
