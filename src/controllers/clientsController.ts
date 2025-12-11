@@ -68,7 +68,7 @@ export async function createClient(req: Request, res: Response, next: NextFuncti
   try {
     const { name } = req.body as Partial<Client>;
     if (!name || typeof name !== 'string' || !name.trim()) {
-      res.status(400).json({ success: false, message: 'Name is required and must be a non-empty string' });
+      res.status(400).json({ success: false, message: 'Name is required' });
       return;
     }
     const client = await prisma.client.create({ data: { name: name.trim() } });
@@ -94,14 +94,13 @@ export async function updateClient(req: Request, res: Response, next: NextFuncti
       return;
     }
     const { code } = req.body as Partial<Client>;
-    const data: Partial<Pick<Client, 'code'>> = {};
-    if (typeof code === 'string') {
-      const minLen = Number.parseInt(process.env.CLIENT_CODE_MIN_LENGTH ?? '4', 10);
-      if (code.length < minLen) {
-        res.status(400).json({ success: false, message: `Code must be at least ${minLen} characters long` });
-        return;
-      }
-      const hash = await bcrypt.hash(code, 10);
+    const data: any = {};
+      if (typeof code === 'string') {
+        if (code.length < 10) {
+          res.status(400).json({ success: false, message: 'Code must be at least 10 characters long' });
+          return;
+        }
+        const hash = await bcrypt.hash(code, 10); // bcrypt salt rounds = 10
       data.code = hash;
     }
     if (Object.keys(data).length === 0) {

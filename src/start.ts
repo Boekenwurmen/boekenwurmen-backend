@@ -12,7 +12,7 @@ import cookieParser from 'cookie-parser';
 const app: Application = Express();
 const port: number = process.env.PORT ? parseInt(process.env.PORT) : 3012;
 
-// security middleware
+// security + CORS middleware
 app.use(helmet());
 // Configure CORS securely: allow specific origins via env CORS_ORIGIN (comma-separated)
 const allowedOrigins = process.env.CORS_ORIGIN
