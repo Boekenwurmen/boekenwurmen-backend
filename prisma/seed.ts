@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+import bcrypt from 'bcryptjs';
 // reference a type from the generated Prisma Client
 // import type { Client } from '@prisma/client';
 const prisma: PrismaClient = new PrismaClient();
@@ -8,7 +9,7 @@ import { Client } from './types.ts';
 const clients: Client[] = [
   {
     name: 'test',
-    code: 'test',
+    code: '12345678910',
   },
 ];
 
@@ -17,10 +18,11 @@ const clients: Client[] = [
 const load = async (): Promise<void> => {
   try {
     for (const c of clients) {
+      const hashed = c.code ? await bcrypt.hash(c.code, 10) : null;
       await prisma.client.upsert({
         where: { name: c.name },
-        update: { code: c.code },
-        create: c,
+        update: { code: hashed ?? undefined },
+        create: { name: c.name, code: hashed ?? undefined },
       });
     }
     console.log('Seeded clients');
