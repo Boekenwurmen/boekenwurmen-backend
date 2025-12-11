@@ -1,7 +1,7 @@
 import Express, { Router } from 'express';
 import { getClient, getClients, createClient, updateClient, loginClient, refreshToken, logoutClient } from '../controllers/clientsController.js';
 import { requireAuth } from '../middleware/auth.js';
-import { getBooks, getPages, getStory, getChoices } from '../controllers/booksController.ts';
+import { getBookMetadata, getBooks, getIntroductionBook, getPages, getStory, getChoices, getPageType } from '../controllers/booksController.ts';
 const router: Router = Express.Router();
 
 // router.get('/', (req: Request, res: Response, next: NextFunction) => {
@@ -19,8 +19,11 @@ router.post('/clients/refresh', refreshToken);
 router.post('/clients/logout', logoutClient);
 
 router.get('/books/', getBooks);
+router.get('/books/introduction', getIntroductionBook);
 router.get('/books/:bookId', getPages);
+router.get('/books/:bookId/metadata', getBookMetadata);
 router.get('/books/:bookId/:pageId', getStory);
+router.get('/books/:bookId/:pageId/type', getPageType);
 router.get('/books/:bookId/:pageId/options', getChoices);
 
 export default router;
