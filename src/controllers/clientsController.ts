@@ -95,6 +95,10 @@ export async function updateClient(req: Request, res: Response, next: NextFuncti
       const hash = await bcrypt.hash(code, 10);
       data.code = hash;
     }
+    if (Object.keys(data).length === 0) {
+      res.status(400).json({ success: false, message: 'No valid fields provided for update' });
+      return;
+    }
     const client = await prisma.client.update({ where: { id }, data });
     res.json({ success: true, client });
   } catch (err) {
