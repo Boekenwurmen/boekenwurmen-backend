@@ -95,12 +95,12 @@ export async function updateClient(req: Request, res: Response, next: NextFuncti
     }
     const { code } = req.body as Partial<Client>;
     const data: any = {};
-    if (typeof code === 'string') {
-      if (code.length < 4 || code.length > 8) {
-        res.status(400).json({ success: false, message: 'Code must be between 4 and 8 characters long' });
+      if (typeof code === 'string') {
+        if (code.length !== 10) {
+          res.status(400).json({ success: false, message: 'Code must be exactly 10 characters long' });
         return;
       }
-      const hash = await bcrypt.hash(code, 10);
+        const hash = await bcrypt.hash(code, 10); // bcrypt salt rounds = 10
       data.code = hash;
     }
     if (Object.keys(data).length === 0) {
