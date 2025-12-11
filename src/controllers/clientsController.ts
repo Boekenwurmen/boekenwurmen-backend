@@ -94,11 +94,10 @@ export async function updateClient(req: Request, res: Response, next: NextFuncti
       return;
     }
     const { code } = req.body as Partial<Client>;
-    const data: Partial<Pick<Client, 'code'>> = {};
+    const data: any = {};
     if (typeof code === 'string') {
-      const minLen = Number.parseInt(process.env.CLIENT_CODE_MIN_LENGTH ?? '4', 10);
-      if (code.length < minLen) {
-        res.status(400).json({ success: false, message: `Code must be at least ${minLen} characters long` });
+      if (code.length < 4 || code.length > 8) {
+        res.status(400).json({ success: false, message: 'Code must be between 4 and 8 characters long' });
         return;
       }
       const hash = await bcrypt.hash(code, 10);
