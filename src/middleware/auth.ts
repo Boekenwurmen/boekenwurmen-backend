@@ -9,8 +9,13 @@ type JwtPayload = {
 
 function getEnv(name: string): string {
   const v = process.env[name];
-  if (!v) throw new Error(`Missing env: ${name}`);
-  return v;
+  if (v && v.length > 0) return v;
+  // Provide dev-safe defaults to avoid 500s when .env isn't loaded
+  if (process.env.NODE_ENV !== 'production') {
+    if (name === 'JWT_SECRET') return 'dev-access-secret-change-me';
+    if (name === 'JWT_REFRESH_SECRET') return 'dev-refresh-secret-change-me';
+  }
+  throw new Error(`Missing env: ${name}`);
 }
 
 export function signAccessToken(payload: JwtPayload): string {
