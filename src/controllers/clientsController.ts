@@ -91,7 +91,11 @@ export async function updateClient(req: Request, res: Response, next: NextFuncti
     }
     const { code } = req.body as Partial<Client>;
     const data: any = {};
-    if (typeof code === 'string' && code.length > 0) {
+    if (typeof code === 'string') {
+      if (code.length < 4 || code.length > 8) {
+        res.status(400).json({ success: false, message: 'Code must be between 4 and 8 characters long' });
+        return;
+      }
       const hash = await bcrypt.hash(code, 10);
       data.code = hash;
     }
