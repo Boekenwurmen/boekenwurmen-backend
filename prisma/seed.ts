@@ -7,16 +7,8 @@ import { Client } from './types.ts';
 // if you use the model you have to fill in all the fields also the generated ones
 const clients: Client[] = [
   {
-    name: 'Jane Doe',
-    email: 'jane@doe.com',
-  },
-  {
-    name: 'John Doe',
-    email: 'john@doe.com',
-  },
-  {
-    name: 'Mary Jane',
-    email: 'mary@jane.com',
+    name: 'test',
+    code: 'test',
   },
 ];
 
