@@ -83,7 +83,7 @@
         },
         {
           "story": "The librarian looks through the list of names. \"That's unfortunate\" he says, \"this name is taken by somebody else\".",
-          "type": "set password",
+          "type": "page",
           "options": [
             {"toPage":8, "type": "page", "name":"go back"}
           ]
@@ -99,7 +99,7 @@
         },
         {
           "story": "The librarian frowns upon hearing the codword. He says that this is far to easy to guess. Tell him a secure codeword you may use to enter again at a later moment.",
-          "type": "set password",
+          "type": "page",
           "options": [
             {"toPage":10, "type": "page", "name":"go back"}
           ]
@@ -121,7 +121,7 @@
           ]
         },
         {
-          "story": "The librarian asks you tell it the secure codeword used previously.",
+          "story": "The librarian asks you tell him the secure codeword used previously.",
           "type": "enter password",
           "options": [
             {"toPage":16, "type": "submit", "name":"next"},
