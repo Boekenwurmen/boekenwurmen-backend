@@ -342,7 +342,7 @@
           "story": "Je probeert je te verstoppen, maar struikelt. De archivaris alarmeert de wachters.",
           "type": "page",
           "options": [
-            {"toPage": 0, "type": "ending", "name": "Slecht einde 1: Je wordt opgepakt en mist je teleporteermoment."}
+            {"toPage": 0, "type": "bad ending", "name": "Slecht einde 1: Je wordt opgepakt en mist je teleporteermoment."}
           ]
         },
         {
@@ -365,7 +365,7 @@
           "story": "Je timer loopt af en je wordt direct teruggeteleporteerd zonder iets in handen te hebben.",
           "type": "page",
           "options": [
-            {"toPage": 0, "type": "ending", "name": "Slecht einde 2: Missie mislukt."}
+            {"toPage": 0, "type": "bad ending", "name": "Slecht einde 2: Missie mislukt."}
           ]
         },
         {
