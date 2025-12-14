@@ -68,8 +68,7 @@
           "story": "The library appears to be shut securely, an old librarian asks you if you have been here before.",
           "type": "page",
           "options": [
-            {"toPage":8, "type": "page", "name":"I'm new here"},
-            {"toPage":13, "type": "page", "name":"I've been here before"}
+            {"toPage":8, "type": "page", "name":"I'm new here"}
           ]
         },
         {
