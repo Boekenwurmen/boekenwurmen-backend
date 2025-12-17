@@ -1,163 +1,163 @@
 {
 	"hatch": {
-		"woordsoort": "znw.",
-		"vertaling": "luik",
-		"definitie": "Een klein deurtje in de vloer of muur waardoor je naar een andere ruimte kunt komen.",
-		"voorbeeld": "Hij legde zijn oor tegen het luik en hoorde stromend water." 
+		"wordType": "znw.",
+		"translation": "luik",
+		"definition": "Een klein deurtje in de vloer of muur waardoor je naar een andere ruimte kunt komen.",
+		"example": "Hij legde zijn oor tegen het luik en hoorde stromend water." 
 	},
 	"desert": {
-		"woordsoort": "znw.",
-		"vertaling": "woestijn",
-		"definitie": "Een groot, droog gebied met (meestal) veel zand en weinig of geen planten of water.",
-		"voorbeeld": "In de hitte van de woestijn raakte hij gedesoriënteerd." 
+		"wordType": "znw.",
+		"translation": "woestijn",
+		"definition": "Een groot, droog gebied met (meestal) veel zand en weinig of geen planten of water.",
+		"example": "In de hitte van de woestijn raakte hij gedesoriënteerd." 
 	},
 	"makeshift": {
-		"woordsoort": "adj.",
-		"vertaling": "noodoplossing",
-		"definitie": "Iets dat snel en tijdelijk gemaakt is om een probleem te overbruggen.",
-		"voorbeeld": "Ze maakten een noodverband van een stuk stof." 
+		"wordType": "adj.",
+		"translation": "noodoplossing",
+		"definition": "Iets dat snel en tijdelijk gemaakt is om een probleem te overbruggen.",
+		"example": "Ze maakten een noodverband van een stuk stof." 
 	},
 	"bandage": {
-		"woordsoort": "znw.",
-		"vertaling": "verband",
-		"definitie": "Doek of pleister die je gebruikt om een wond te beschermen of te verbinden.",
-		"voorbeeld": "Hij bond een verband om zijn been om het bloeden te stoppen." 
+		"wordType": "znw.",
+		"translation": "verband",
+		"definition": "Doek of pleister die je gebruikt om een wond te beschermen of te verbinden.",
+		"example": "Hij bond een verband om zijn been om het bloeden te stoppen." 
 	},
 	"librarian": {
-		"woordsoort": "znw.",
-		"vertaling": "bibliothecaris",
-		"definitie": "Iemand die in een bibliotheek werkt en helpt bij het vinden of beheren van boeken.",
-		"voorbeeld": "De bibliothecaris keek in het register om zijn naam te vinden." 
+		"wordType": "znw.",
+		"translation": "bibliothecaris",
+		"definition": "Iemand die in een bibliotheek werkt en helpt bij het vinden of beheren van boeken.",
+		"example": "De bibliothecaris keek in het register om zijn naam te vinden." 
 	},
 	"scramble": {
-		"woordsoort": "ww.",
-		"vertaling": "vercijferen / door elkaar husselen",
-		"definitie": "Iets zodanig door elkaar zetten of veranderen dat het onleesbaar of moeilijk te begrijpen wordt; ook: versleutelen.",
-		"voorbeeld": "Hij versleutelde het codewoord zodat niemand het kon lezen." 
+		"wordType": "ww.",
+		"translation": "vercijferen / door elkaar husselen",
+		"definition": "Iets zodanig door elkaar zetten of veranderen dat het onleesbaar of moeilijk te begrijpen wordt; ook: versleutelen.",
+		"example": "Hij versleutelde het codewoord zodat niemand het kon lezen." 
 	},
 	"codeword": {
-		"woordsoort": "znw.",
-		"vertaling": "codewoord",
-		"definitie": "Een geheim woord dat je gebruikt om jezelf te herkennen of toegang te krijgen.",
-		"voorbeeld": "Ze vroegen naar het codewoord voordat ze je binnenlieten." 
+		"wordType": "znw.",
+		"translation": "codewoord",
+		"definition": "Een geheim woord dat je gebruikt om jezelf te herkennen of toegang te krijgen.",
+		"example": "Ze vroegen naar het codewoord voordat ze je binnenlieten." 
 	},
 	"nickname": {
-		"woordsoort": "znw.",
-		"vertaling": "bijnaam",
-		"definitie": "Een naam die iemand gebruikt of krijgt die anders is dan zijn echte naam; vaak informeel.",
-		"voorbeeld": "Zijn bijnaam was kort en makkelijk te onthouden." 
+		"wordType": "znw.",
+		"translation": "bijnaam",
+		"definition": "Een naam die iemand gebruikt of krijgt die anders is dan zijn echte naam; vaak informeel.",
+		"example": "Zijn bijnaam was kort en makkelijk te onthouden." 
 	},
 	"register": {
-		"woordsoort": "znw.",
-		"vertaling": "register / inschrijvingslijst",
-		"definitie": "Een lijst of boek waarin namen en gegevens worden bijgehouden.",
-		"voorbeeld": "De bibliothecaris keek in het register of je al eens eerder was geweest." 
+		"wordType": "znw.",
+		"translation": "register / inschrijvingslijst",
+		"definition": "Een lijst of boek waarin namen en gegevens worden bijgehouden.",
+		"example": "De bibliothecaris keek in het register of je al eens eerder was geweest." 
 	},
 	"throat": {
-		"woordsoort": "znw.",
-		"vertaling": "keel",
-		"definitie": "Het deel van je nek binnenin waardoor je kunt slikken en ademen.",
-		"voorbeeld": "Door de droge lucht begon zijn keel te schrapen." 
+		"wordType": "znw.",
+		"translation": "keel",
+		"definition": "Het deel van je nek binnenin waardoor je kunt slikken en ademen.",
+		"example": "Door de droge lucht begon zijn keel te schrapen." 
 	},
 	"katapulteerd": {
-		"woordsoort": "ww.",
-		"vertaling": "wegschieten / katapulteren",
-		"definitie": "Met veel kracht of plotseling ergens naartoe brengen of gooien; figuurlijk: abrupt vervoerd worden.",
-		"voorbeeld": "Hij voelde zich alsof hij in één ogenblik naar het verleden werd gekatapulteerd." 
+		"wordType": "ww.",
+		"translation": "wegschieten / katapulteren",
+		"definition": "Met veel kracht of plotseling ergens naartoe brengen of gooien; figuurlijk: abrupt vervoerd worden.",
+		"example": "Hij voelde zich alsof hij in één ogenblik naar het verleden werd gekatapulteerd." 
 	},
 	"teleporteert": {
-		"woordsoort": "ww.",
-		"vertaling": "teleporteert / direct verplaatsen",
-		"definitie": "Zich onmiddellijk van de ene plaats naar de andere verplaatsen zonder de tussenliggende ruimte te doorlopen.",
-		"voorbeeld": "Het apparaat teleporteert je terug naar het heden." 
+		"wordType": "ww.",
+		"translation": "teleporteert / direct verplaatsen",
+		"definition": "Zich onmiddellijk van de ene plaats naar de andere verplaatsen zonder de tussenliggende ruimte te doorlopen.",
+		"example": "Het apparaat teleporteert je terug naar het heden." 
 	},
 	"timer": {
-		"woordsoort": "znw.",
-		"vertaling": "timer / tijdklok",
-		"definitie": "Een apparaat of instelling die de tijd telt en vaak ergens een grens of alarm aan verbindt.",
-		"voorbeeld": "De timer op zijn pols liep langzaam naar nul." 
+		"wordType": "znw.",
+		"translation": "timer / tijdklok",
+		"definition": "Een apparaat of instelling die de tijd telt en vaak ergens een grens of alarm aan verbindt.",
+		"example": "De timer op zijn pols liep langzaam naar nul." 
 	},
 	"pols": {
-		"woordsoort": "znw.",
-		"vertaling": "pols",
-		"definitie": "Het smalle deel van je arm bij de hand, waar vaak een horloge of timer wordt gedragen.",
-		"voorbeeld": "Hij keek op de timer aan zijn pols." 
+		"wordType": "znw.",
+		"translation": "pols",
+		"definition": "Het smalle deel van je arm bij de hand, waar vaak een horloge of timer wordt gedragen.",
+		"example": "Hij keek op de timer aan zijn pols." 
 	},
 	"perkament": {
-		"woordsoort": "znw.",
-		"vertaling": "perkament",
-		"definitie": "Dierlijk vel dat vroeger werd gebruikt als schrijfmateriaal; vaak te vinden in oude documenten.",
-		"voorbeeld": "Het document was geschreven op een vergeeld stuk perkament." 
+		"wordType": "znw.",
+		"translation": "perkament",
+		"definition": "Dierlijk vel dat vroeger werd gebruikt als schrijfmateriaal; vaak te vinden in oude documenten.",
+		"example": "Het document was geschreven op een vergeeld stuk perkament." 
 	},
 	"archief": {
-		"woordsoort": "znw.",
-		"vertaling": "archief",
-		"definitie": "Een plek of verzameling waar oude documenten, kaarten of gegevens bewaard worden.",
-		"voorbeeld": "Het archief bevond zich onder het kasteel." 
+		"wordType": "znw.",
+		"translation": "archief",
+		"definition": "Een plek of verzameling waar oude documenten, kaarten of gegevens bewaard worden.",
+		"example": "Het archief bevond zich onder het kasteel." 
 	},
 	"archivaris": {
-		"woordsoort": "znw.",
-		"vertaling": "archivaris",
-		"definitie": "Iemand die werkt in een archief en verantwoordelijk is voor het organiseren en bewaren van documenten.",
-		"voorbeeld": "De archivaris hielp hem het juiste document te vinden." 
+		"wordType": "znw.",
+		"translation": "archivaris",
+		"definition": "Iemand die werkt in een archief en verantwoordelijk is voor het organiseren en bewaren van documenten.",
+		"example": "De archivaris hielp hem het juiste document te vinden." 
 	},
 	"stropers": {
-		"woordsoort": "znw.",
-		"vertaling": "stropers",
-		"definitie": "Mensen die illegaal jagen of dingen stelen uit bijvoorbeeld bossen of kastelen; vaak negatieve connotatie.",
-		"voorbeeld": "De stropers probeerden hem te chante­r­en voor informatie." 
+		"wordType": "znw.",
+		"translation": "stropers",
+		"definition": "Mensen die illegaal jagen of dingen stelen uit bijvoorbeeld bossen of kastelen; vaak negatieve connotatie.",
+		"example": "De stropers probeerden hem te chante­r­en voor informatie." 
 	},
 	"taverne": {
-		"woordsoort": "znw.",
-		"vertaling": "taverne / herberg",
-		"definitie": "Een oude benaming voor een kroeg of herberg waar mensen eten, drinken en praten.",
-		"voorbeeld": "In de taverne hoorde hij geruchten over het verboden document." 
+		"wordType": "znw.",
+		"translation": "taverne / herberg",
+		"definition": "Een oude benaming voor een kroeg of herberg waar mensen eten, drinken en praten.",
+		"example": "In de taverne hoorde hij geruchten over het verboden document." 
 	},
 	"zegel": {
-		"woordsoort": "znw.",
-		"vertaling": "zegel",
-		"definitie": "Een officiële stempel of markering die bevestigt dat een document echt of officieel is.",
-		"voorbeeld": "Het document droeg een glimmend zegel van de koning." 
+		"wordType": "znw.",
+		"translation": "zegel",
+		"definition": "Een officiële stempel of markering die bevestigt dat een document echt of officieel is.",
+		"example": "Het document droeg een glimmend zegel van de koning." 
 	},
 	"teleportatie": {
-		"woordsoort": "znw.",
-		"vertaling": "teleportatie",
-		"definitie": "Het verplaatsen van iets of iemand direct naar een andere plaats, zonder de ruimte ertussen te reizen.",
-		"voorbeeld": "De teleportatie kwam plotseling op gang." 
+		"wordType": "znw.",
+		"translation": "teleportatie",
+		"definition": "Het verplaatsen van iets of iemand direct naar een andere plaats, zonder de ruimte ertussen te reizen.",
+		"example": "De teleportatie kwam plotseling op gang." 
 	},
 	"climax": {
-		"woordsoort": "znw.",
-		"definitie": "Het spannendste of belangrijkste moment in een verhaal; het hoogtepunt.",
-		"voorbeeld": "De confrontatie met de archivaris was het climax van het verhaal." 
+		"wordType": "znw.",
+		"definition": "Het spannendste of belangrijkste moment in een verhaal; het hoogtepunt.",
+		"example": "De confrontatie met de archivaris was het climax van het verhaal." 
 	},
 	"protagonist": {
-		"woordsoort": "znw.",
-		"definitie": "De hoofdpersoon van een verhaal; degene met wie de lezer meestal meeleeft.",
-		"voorbeeld": "De protagonist riskeerde alles om het document te vinden." 
+		"wordType": "znw.",
+		"definition": "De hoofdpersoon van een verhaal; degene met wie de lezer meestal meeleeft.",
+		"example": "De protagonist riskeerde alles om het document te vinden." 
 	},
 	"antagonist": {
-		"woordsoort": "znw.",
-		"definitie": "De tegenstander in een verhaal; iemand of iets dat de hoofdpersoon tegenwerkt.",
-		"voorbeeld": "De wachters fungeerden als antagonisten in het verhaal." 
+		"wordType": "znw.",
+		"definition": "De tegenstander in een verhaal; iemand of iets dat de hoofdpersoon tegenwerkt.",
+		"example": "De wachters fungeerden als antagonisten in het verhaal." 
 	},
 	"epiloog": {
-		"woordsoort": "znw.",
-		"definitie": "Een kort hoofdstuk aan het einde van een verhaal dat vaak vertelt wat er later met de personages gebeurt.",
-		"voorbeeld": "In de epiloog zagen we dat de wereld was gered." 
+		"wordType": "znw.",
+		"definition": "Een kort hoofdstuk aan het einde van een verhaal dat vaak vertelt wat er later met de personages gebeurt.",
+		"example": "In de epiloog zagen we dat de wereld was gered." 
 	},
 	"metafoor": {
-		"woordsoort": "znw.",
-		"definitie": "Een beeldspraak waarbij iets wordt vergeleken met iets anders om het duidelijker of sterker te maken (zonder 'als').",
-		"voorbeeld": "'Hij was een rots in de branding' is een metafoor." 
+		"wordType": "znw.",
+		"definition": "Een beeldspraak waarbij iets wordt vergeleken met iets anders om het duidelijker of sterker te maken (zonder 'als').",
+		"example": "'Hij was een rots in de branding' is een metafoor." 
 	},
 	"symboliek": {
-		"woordsoort": "znw.",
-		"definitie": "Het gebruik van symbolen om een diepere betekenis of idee in een verhaal uit te drukken.",
-		"voorbeeld": "De taal van de boeken in de bibliotheek is een vorm van symboliek." 
+		"wordType": "znw.",
+		"definition": "Het gebruik van symbolen om een diepere betekenis of idee in een verhaal uit te drukken.",
+		"example": "De taal van de boeken in de bibliotheek is een vorm van symboliek." 
 	},
 	"anachronisme": {
-		"woordsoort": "znw.",
-		"definitie": "Iets in een verhaal dat niet past in de tijd waarin het zich afspeelt (bijv. een modern voorwerp in de middeleeuwen).",
-		"voorbeeld": "Een horloge in een middeleeuwse scène is een anachronisme." 
+		"wordType": "znw.",
+		"definition": "Iets in een verhaal dat niet past in de tijd waarin het zich afspeelt (bijv. een modern voorwerp in de middeleeuwen).",
+		"example": "Een horloge in een middeleeuwse scène is een anachronisme." 
 	}
 }

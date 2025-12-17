@@ -20,10 +20,10 @@ interface ClientResponse {
 }
 
 interface DictionaryItem {
-  woordsoort: string;
-  vertaling?: string;
-  definitie: string;
-  voorbeeld: string;
+  wordType: "adj."|"ww."|"znw.";
+  translation?: string;
+  definition: string;
+  example: string;
 }
 
 /**
@@ -110,7 +110,7 @@ function _getWordlistFromJson():string[] {
 
 function _getDefinitionFromJson(word:string):DictionaryItem|null {
   const dictionary = dictionaryData.default;
-  const dictionaryItem:DictionaryItem = dictionary[word as keyof typeof dictionary];
+  const dictionaryItem:DictionaryItem = dictionary[word as keyof typeof dictionary] as DictionaryItem;
   // Object.keys(dictionary).find(e => e === word);
   return dictionaryItem ?? null;
 }
