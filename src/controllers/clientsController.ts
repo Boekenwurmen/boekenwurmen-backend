@@ -67,20 +67,22 @@ export async function getClient(req: Request, res: Response, next: NextFunction)
 export async function createClient(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
     const { name, code } = req.body as Partial<Client> & { code?: string };
-    if (!name || typeof name !== 'string' || !name.trim()) {
+    const nameTrim = typeof name === 'string' ? name.trim() : '';
+    if (!nameTrim) {
       res.status(400).json({ success: false, message: 'Name is required' });
       return;
     }
-    if (!code || typeof code !== 'string' || code.length < 10) {
+    const codeTrim = typeof code === 'string' ? code.trim() : '';
+    if (codeTrim.length < 10) {
       res.status(400).json({ success: false, message: 'Code must be at least 10 characters long' });
       return;
     }
-    const hashed = await bcrypt.hash(code, 10);
-    const client = await prisma.client.create({ data: { name: name.trim(), code: hashed } });
+    const hashed = await bcrypt.hash(codeTrim, 10);
+    const client = await prisma.client.create({ data: { name: nameTrim, code: hashed } });
     // Only expose public fields back to client (avoid returning hash)
     res.status(201).json({ success: true, client: { id: client.id, name: client.name } });
   } catch (err: any) {
-    if ((err as any)?.code === 'P2002') {
+    if (err?.code === 'P2002') {
       res.status(409).json({ success: false, message: 'Name already taken' });
       return;
     }
@@ -102,11 +104,12 @@ export async function updateClient(req: Request, res: Response, next: NextFuncti
     const { code } = req.body as Partial<Client>;
     const data: any = {};
       if (typeof code === 'string') {
-        if (code.length < 10) {
+        const codeTrim = code.trim();
+        if (codeTrim.length < 10) {
           res.status(400).json({ success: false, message: 'Code must be at least 10 characters long' });
           return;
         }
-        const hash = await bcrypt.hash(code, 10); // bcrypt salt rounds = 10
+        const hash = await bcrypt.hash(codeTrim, 10); // bcrypt salt rounds = 10
       data.code = hash;
     }
     if (Object.keys(data).length === 0) {
@@ -126,7 +129,8 @@ export async function updateClient(req: Request, res: Response, next: NextFuncti
 export async function loginClient(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
     const { name, code } = req.body as { name?: string; code?: string };
-    if (!name || !code) {
+    const codeInput = typeof code === 'string' ? code.trim() : '';
+    if (!name || !codeInput) {
       res.status(400).json({ success: false, message: 'Name and code are required' });
       return;
     }
@@ -135,7 +139,7 @@ export async function loginClient(req: Request, res: Response, next: NextFunctio
       res.status(401).json({ success: false, message: 'Invalid credentials' });
       return;
     }
-    const ok = await bcrypt.compare(code, client.code);
+    const ok = await bcrypt.compare(codeInput, client.code);
     if (!ok) {
       res.status(401).json({ success: false, message: 'Invalid credentials' });
       return;
