@@ -2,13 +2,12 @@ import Express, { Router } from 'express';
 import { getClient, getClients, createClient, updateClient, loginClient, refreshToken, logoutClient } from '../controllers/clientsController.js';
 import { requireAuth } from '../middleware/auth.js';
 import { getBookMetadata, getBooks, getIntroductionBook, getPages, getStory, getChoices, getPageType } from '../controllers/booksController.ts';
+import { getDefaultRoutes } from '../controllers/rootController.ts';
 import { getDefinition, getWordlist } from '../controllers/dictionaryController.ts';
 const router: Router = Express.Router();
 
-// router.get('/', (req: Request, res: Response, next: NextFunction) => {
-//   res.json('hi');
-//   next();
-// });
+router.get('/', getDefaultRoutes);
+
 // Define login before parameterized routes to avoid '/clients/login' matching ':id'
 router.post('/clients/login', loginClient);
 router.get('/clients', requireAuth, getClients);
@@ -19,7 +18,7 @@ router.patch('/clients/:id', updateClient);
 router.post('/clients/refresh', refreshToken);
 router.post('/clients/logout', logoutClient);
 
-router.get('/books/', getBooks);
+router.get('/books', getBooks);
 router.get('/books/introduction', getIntroductionBook);
 router.get('/books/:bookId', getPages);
 router.get('/books/:bookId/metadata', getBookMetadata);
