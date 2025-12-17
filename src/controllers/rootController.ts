@@ -30,7 +30,7 @@ export async function getDefaultRoutes(req: Request, res: Response, next: NextFu
     const data:string[] = [
       '/clients',
       '/books',
-      // '/dictionary', coming soon
+      '/dictionary',
     ];
     const response: RootResponse = {
       meta: {
