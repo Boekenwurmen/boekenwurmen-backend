@@ -2,6 +2,7 @@ import Express, { Router } from 'express';
 import { getClient, getClients, createClient, updateClient, loginClient, refreshToken, logoutClient } from '../controllers/clientsController.js';
 import { requireAuth } from '../middleware/auth.js';
 import { getBookMetadata, getBooks, getIntroductionBook, getPages, getStory, getChoices, getPageType } from '../controllers/booksController.ts';
+import { getDefinition, getWordlist } from '../controllers/dictionaryController.ts';
 const router: Router = Express.Router();
 
 // router.get('/', (req: Request, res: Response, next: NextFunction) => {
@@ -25,5 +26,8 @@ router.get('/books/:bookId/metadata', getBookMetadata);
 router.get('/books/:bookId/:pageId', getStory);
 router.get('/books/:bookId/:pageId/type', getPageType);
 router.get('/books/:bookId/:pageId/options', getChoices);
+
+router.get('/dictionary', getWordlist);
+router.get('/dictionary/:word', getDefinition);
 
 export default router;
