@@ -3,6 +3,7 @@ import { getClient, getClients, createClient, updateClient, loginClient, refresh
 import { requireAuth } from '../middleware/auth.js';
 import { getBookMetadata, getBooks, getIntroductionBook, getPages, getStory, getChoices, getPageType } from '../controllers/booksController.ts';
 import { getDefaultRoutes } from '../controllers/rootController.ts';
+import { getDefinition, getWordlist } from '../controllers/dictionaryController.ts';
 const router: Router = Express.Router();
 
 router.get('/', getDefaultRoutes);
@@ -24,5 +25,8 @@ router.get('/books/:bookId/metadata', getBookMetadata);
 router.get('/books/:bookId/:pageId', getStory);
 router.get('/books/:bookId/:pageId/type', getPageType);
 router.get('/books/:bookId/:pageId/options', getChoices);
+
+router.get('/dictionary', getWordlist);
+router.get('/dictionary/:word', getDefinition);
 
 export default router;
