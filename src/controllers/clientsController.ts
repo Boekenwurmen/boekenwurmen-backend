@@ -66,15 +66,21 @@ export async function getClient(req: Request, res: Response, next: NextFunction)
  */
 export async function createClient(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
-    const { name } = req.body as Partial<Client>;
+    const { name, code } = req.body as Partial<Client> & { code?: string };
     if (!name || typeof name !== 'string' || !name.trim()) {
       res.status(400).json({ success: false, message: 'Name is required' });
       return;
     }
-    const client = await prisma.client.create({ data: { name: name.trim() } });
-    res.status(201).json({ success: true, client });
+    if (!code || typeof code !== 'string' || code.length < 10) {
+      res.status(400).json({ success: false, message: 'Code must be at least 10 characters long' });
+      return;
+    }
+    const hashed = await bcrypt.hash(code, 10);
+    const client = await prisma.client.create({ data: { name: name.trim(), code: hashed } });
+    // Only expose public fields back to client (avoid returning hash)
+    res.status(201).json({ success: true, client: { id: client.id, name: client.name } });
   } catch (err: any) {
-    if (err?.code === 'P2002') {
+    if ((err as any)?.code === 'P2002') {
       res.status(409).json({ success: false, message: 'Name already taken' });
       return;
     }
