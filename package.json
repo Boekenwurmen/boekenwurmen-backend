@@ -10,7 +10,15 @@
     "postinstall": "prisma generate",
     "dev": "nodemon --watch src --ext ts --exec tsx src/start.ts",
     "start": "tsx src/start.ts",
-    "test": "vitest run"
+    "test": "vitest run",
+    "migrate": "npx prisma migrate dev --name init --skip-generate",
+    "seed": "npx prisma db seed",
+    "db": "npm run migrate && npm run seed",
+    "env" : "node -e \"require('fs').copyFileSync('.env.example', '.env')\"",
+    "init": "npm install && npm run db",
+    "init:dev": "npm run init && npm run dev",
+    "init:test": "npm run init && npm run test",
+    "init:start": "npm run init && npm run start"
   },
   "dependencies": {
     "@prisma/client": "^6.14.0",
