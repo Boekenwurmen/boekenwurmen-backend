@@ -12,6 +12,8 @@ interface Client {
   createdAt?: Date,
   name: string,
   code?: string,
+  resetToken?: string,
+  resetTokenExpires?: Date,
 }
 
 export { Client };

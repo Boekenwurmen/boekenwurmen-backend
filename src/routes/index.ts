@@ -1,5 +1,5 @@
 import Express, { Router } from 'express';
-import { getClient, getClients, createClient, updateClient, loginClient, refreshToken, logoutClient } from '../controllers/clientsController.js';
+import { getClient, getClients, createClient, updateClient, loginClient, refreshToken, logoutClient, resetRequest, resetCode, resetDirect } from '../controllers/clientsController.js';
 import { requireAuth } from '../middleware/auth.js';
 import { getBookMetadata, getBooks, getIntroductionBook, getPages, getStory, getChoices, getPageType } from '../controllers/booksController.ts';
 import { getDefaultRoutes } from '../controllers/rootController.ts';
@@ -10,6 +10,9 @@ router.get('/', getDefaultRoutes);
 
 // Define login before parameterized routes to avoid '/clients/login' matching ':id'
 router.post('/clients/login', loginClient);
+router.post('/clients/reset-request', resetRequest);
+router.post('/clients/reset', resetCode);
+router.post('/clients/reset-direct', resetDirect);
 router.get('/clients', requireAuth, getClients);
 // Allow public read of a single client (sanitized to id+name only)
 router.get('/clients/:id', getClient);
