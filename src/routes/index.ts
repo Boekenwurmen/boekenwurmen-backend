@@ -4,6 +4,7 @@ import { requireAuth } from '../middleware/auth.js';
 import { getBookMetadata, getBooks, getIntroductionBook, getPages, getStory, getChoices, getPageType } from '../controllers/booksController.ts';
 import { getDefaultRoutes } from '../controllers/rootController.ts';
 import { getDefinition, getWordlist } from '../controllers/dictionaryController.ts';
+import { getProgress, getClientProgress, updateProgress, getSavepoints, createSavepoint, deleteSavepoint } from '../controllers/progressController.ts';
 const router: Router = Express.Router();
 
 router.get('/', getDefaultRoutes);
@@ -28,6 +29,16 @@ router.get('/books/:bookId/metadata', getBookMetadata);
 router.get('/books/:bookId/:pageId', getStory);
 router.get('/books/:bookId/:pageId/type', getPageType);
 router.get('/books/:bookId/:pageId/options', getChoices);
+
+// Progress routes
+router.get('/progress/:clientId', getClientProgress);
+router.get('/progress/:clientId/:bookId', getProgress);
+router.patch('/progress/:clientId/:bookId', updateProgress);
+
+// Savepoint routes
+router.get('/savepoints/:clientId/:bookId', getSavepoints);
+router.post('/savepoints/:clientId/:bookId', createSavepoint);
+router.delete('/savepoints/:savepointId', deleteSavepoint);
 
 router.get('/dictionary', getWordlist);
 router.get('/dictionary/:word', getDefinition);
