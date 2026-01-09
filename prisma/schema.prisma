@@ -22,3 +22,17 @@ model Client {
   resetToken        String?
   resetTokenExpires DateTime?
 }
+
+model Story {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  bookId    Int
+  pageId    Int
+  type      String?
+  content   String
+
+  @@unique([bookId, pageId], name: "bookId_pageId")
+}
+
+// UserChoice model removed; choices are no longer persisted
