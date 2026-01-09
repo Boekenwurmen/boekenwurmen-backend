@@ -22,3 +22,12 @@ model Client {
   resetToken        String?
   resetTokenExpires DateTime?
 }
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  email     String   @unique
+  password  String   // bcrypt hashed
+  name      String
+  role      String   @default("admin")
+}
