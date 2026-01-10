@@ -33,9 +33,7 @@ model Story {
   content   String
 
   @@unique([bookId, pageId], name: "bookId_pageId")
-}
 
-// UserChoice model removed; choices are no longer persisted
   // Relations
   progresses Progression[]
   savepoints Savepoint[]
