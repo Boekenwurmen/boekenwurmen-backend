@@ -21,6 +21,10 @@ model Client {
   // One-time reset token (hashed) and expiry
   resetToken        String?
   resetTokenExpires DateTime?
+
+  // Relations
+  progresses Progression[]
+  savepoints Savepoint[]
 }
 
 model Story {
@@ -34,9 +38,7 @@ model Story {
 
   @@unique([bookId, pageId], name: "bookId_pageId")
 
-  // Relations
-  progresses Progression[]
-  savepoints Savepoint[]
+
 }
 
 model Progression {
