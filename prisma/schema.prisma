@@ -36,3 +36,34 @@ model Story {
 }
 
 // UserChoice model removed; choices are no longer persisted
+  // Relations
+  progresses Progression[]
+  savepoints Savepoint[]
+}
+
+model Progression {
+  id        Int      @id @default(autoincrement())
+  clientId  Int
+  client    Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  bookId    Int
+  pageId    Int
+  percentage Int      @default(0) // 0-100
+  updatedAt DateTime @default(now()) @updatedAt
+
+  @@unique([clientId, bookId])
+  @@index([clientId])
+  @@index([bookId])
+}
+
+model Savepoint {
+  id        Int      @id @default(autoincrement())
+  clientId  Int
+  client    Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  bookId    Int
+  pageId    Int
+  title     String?
+  createdAt DateTime @default(now())
+
+  @@index([clientId])
+  @@index([bookId])
+}
