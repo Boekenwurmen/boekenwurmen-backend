@@ -400,6 +400,11 @@
         }
       ]
     },
+
+
+
+
+    
     {
       "metadata":{
         "title": "De Verborgen Bibliotheek",
@@ -457,9 +462,9 @@
         "author": "Catherine Doyle",
         "cover_image_url": "/static/covers/rebel-rose.svg",
         "creation_date": "2019",
-        "category": "Fictie"
-      },
-      "pdf": "/static/covers/the-rebel-and-the-rose.pdf"
+        "category": "Fictie",
+        "pdf": "/static/covers/the-rebel-and-the-rose.pdf"
+      }
     },
     {
       "metadata":{
