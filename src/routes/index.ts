@@ -33,6 +33,7 @@ router.get('/books/:bookId/:pageId', getStory);
 router.get('/books/:bookId/:pageId/type', getPageType);
 router.get('/books/:bookId/:pageId/options', getChoices);
 
+// Choices endpoints removed; only static book options served
 // Progress routes
 router.get('/progress/:clientId', getClientProgress);
 router.get('/progress/:clientId/:bookId', getProgress);
