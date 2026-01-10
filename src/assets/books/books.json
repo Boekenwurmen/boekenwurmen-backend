@@ -399,6 +399,168 @@
           ]
         }
       ]
+    },
+    {
+      "metadata":{
+        "title": "De Race Tegen de Tijd",
+        "description": "Een tijdreiziger wordt in de middeleeuwen gekatapulteerd met slechts één uur om een geheim document te vinden dat de toekomst kan redden. Elke keuze telt, want wanneer de timer afloopt, verdwijn je terug naar het heden.",
+        "author": "ChatGPT",
+        "cover_image_url": "/static/placeholder-book.png",
+        "creation_date": "2025",
+        "category": "Fictie"
+      },
+      "pdf": "/read?book=1"
+    },
+    {
+      "metadata":{
+        "title": "De Verborgen Bibliotheek",
+        "description": "Een mysterie dat zich afspeelt tussen de boekenplanken.",
+        "author": "A. Jansen",
+        "cover_image_url": "/static/covers/verborgen-bibliotheek.svg",
+        "creation_date": "1998",
+        "category": "Fictie"
+      }
+    },
+    {
+      "metadata":{
+        "title": "Geschiedenis van Avontuur",
+        "description": "Een overzicht van ontdekkingsreizigers en locaties.",
+        "author": "B. van Dijk",
+        "cover_image_url": "/static/covers/geschiedenis-avontuur.svg",
+        "creation_date": "2005",
+        "category": "Geschiedenis"
+      }
+    },
+    {
+      "metadata":{
+        "title": "Korte Verhalen Voor Avond",
+        "description": "Een bundel korte, intieme vertellingen.",
+        "author": "C. de Vries",
+        "cover_image_url": "/static/covers/korte-verhalen.svg",
+        "creation_date": "2018",
+        "category": "Fictie"
+      }
+    },
+    {
+      "metadata":{
+        "title": "De Bibliothecaris",
+        "description": "Een fascinerende roman over geheimen verborgen tussen antieke boeken.",
+        "author": "M. Vellemann",
+        "cover_image_url": "/static/covers/bibliothecaris.svg",
+        "creation_date": "2020",
+        "category": "Fictie"
+      }
+    },
+    {
+      "metadata":{
+        "title": "Oude Legendes",
+        "description": "Een collectie mythen en sagen van vroeger.",
+        "author": "E. Visser",
+        "cover_image_url": "/static/covers/oude-legendes.svg",
+        "creation_date": "1975",
+        "category": "Cultuur"
+      }
+    },
+    {
+      "metadata":{
+        "title": "The Rebel and the Rose",
+        "description": "Een historische roman vol romance, rebellie en avontuur.",
+        "author": "Catherine Doyle",
+        "cover_image_url": "/static/covers/rebel-rose.svg",
+        "creation_date": "2019",
+        "category": "Fictie"
+      },
+      "pdf": "/static/covers/the-rebel-and-the-rose.pdf"
+    },
+    {
+      "metadata":{
+        "title": "De Nachtwaak",
+        "description": "Een spannend mysterie dat in het donker speelt.",
+        "author": "R. Hogestein",
+        "cover_image_url": "/static/covers/nachtwaak.svg",
+        "creation_date": "2021",
+        "category": "Mysterie"
+      }
+    },
+    {
+      "metadata":{
+        "title": "Reis naar Atlantis",
+        "description": "Een episch avontuur op zoek naar de verloren stad.",
+        "author": "S. Magellan",
+        "cover_image_url": "/static/covers/atlantis.svg",
+        "creation_date": "2008",
+        "category": "Avontuur"
+      }
+    },
+    {
+      "metadata":{
+        "title": "Gedichten van het Hart",
+        "description": "Verzameling van hartverwarmende en diepzinnige gedichten.",
+        "author": "T. Schelling",
+        "cover_image_url": "/static/covers/gedichten-hart.svg",
+        "creation_date": "2015",
+        "category": "Poëzie"
+      }
+    },
+    {
+      "metadata":{
+        "title": "De Verloren Erfenis",
+        "description": "Een familiegeheim dat over generaties wordt verborgen.",
+        "author": "U. Pietersen",
+        "cover_image_url": "/static/covers/erfenis.svg",
+        "creation_date": "2019",
+        "category": "Fictie"
+      }
+    },
+    {
+      "metadata":{
+        "title": "Kosmische Wonderen",
+        "description": "Ontdekkingen over het universum en verre sterrenstelsels.",
+        "author": "V. Sterren",
+        "cover_image_url": "/static/covers/kosmisch.svg",
+        "creation_date": "2022",
+        "category": "Wetenschap"
+      }
+    },
+    {
+      "metadata":{
+        "title": "Het Groene Woud",
+        "description": "Een verhaal over de geheimen van het oerwoud.",
+        "author": "W. Natuur",
+        "cover_image_url": "/static/covers/groen-woud.svg",
+        "creation_date": "2017",
+        "category": "Cultuur"
+      }
+    },
+    {
+      "metadata":{
+        "title": "Stadsleven in Gotiek",
+        "description": "Architectuur en leven in middeleeuwse steden.",
+        "author": "X. Architect",
+        "cover_image_url": "/static/covers/gotiek.svg",
+        "creation_date": "2010",
+        "category": "Geschiedenis"
+      }
+    },
+    {
+      "metadata":{
+        "title": "De Dansende Slaaf",
+        "description": "Een verhaal van vrijheid en uitdrukking door dans.",
+        "author": "Y. Ritme",
+        "cover_image_url": "/static/covers/dans.svg",
+        "creation_date": "2020",
+        "category": "Fictie"
+      }
+    },
+    {
+      "metadata":{
+        "title": "Zenwijsheid voor Vandaag",
+        "description": "Oude wijsheid toegepast op modern leven.",
+        "author": "Z. Meditatie",
+        "cover_image_url": "/static/covers/zen.svg",
+        "creation_date": "2021",
+        "category": "Cultuur"
+      }
     }
   ]
 }
