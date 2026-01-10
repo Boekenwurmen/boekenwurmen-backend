@@ -1,9 +1,12 @@
 import Express, { Router } from 'express';
 import { getClient, getClients, createClient, updateClient, loginClient, refreshToken, logoutClient, resetRequest, resetCode, resetDirect } from '../controllers/clientsController.js';
 import { requireAuth } from '../middleware/auth.js';
+import { requireAdmin } from '../middleware/adminAuth.js';
 import { getBookMetadata, getBooks, getIntroductionBook, getPages, getStory, getChoices, getPageType } from '../controllers/booksController.ts';
 import { getDefaultRoutes } from '../controllers/rootController.ts';
 import { getDefinition, getWordlist } from '../controllers/dictionaryController.ts';
+import { adminLogin, adminLogout, adminRefreshToken, getAdminMe, adminGetClients, adminUpdateClient, adminDeleteClient } from '../controllers/adminController.ts';
+import { adminGetBooks, adminGetBook, adminCreateBook, adminUpdateBook, adminDeleteBook, adminSetIntroductionBook, adminAddPage, adminUpdatePage, adminDeletePage } from '../controllers/adminBooksController.ts';
 import { getProgress, getClientProgress, updateProgress, getSavepoints, createSavepoint, deleteSavepoint } from '../controllers/progressController.ts';
 const router: Router = Express.Router();
 
@@ -42,5 +45,31 @@ router.delete('/savepoints/:savepointId', deleteSavepoint);
 
 router.get('/dictionary', getWordlist);
 router.get('/dictionary/:word', getDefinition);
+
+// ============ ADMIN ROUTES ============
+
+// Admin auth (no requireAdmin needed for login)
+router.post('/admin/login', adminLogin);
+router.post('/admin/logout', adminLogout);
+router.post('/admin/refresh', adminRefreshToken);
+router.get('/admin/me', requireAdmin, getAdminMe);
+
+// Admin - Client/Leaderboard management
+router.get('/admin/clients', requireAdmin, adminGetClients);
+router.put('/admin/clients/:id', requireAdmin, adminUpdateClient);
+router.delete('/admin/clients/:id', requireAdmin, adminDeleteClient);
+
+// Admin - Book management
+router.get('/admin/books', requireAdmin, adminGetBooks);
+router.get('/admin/books/:bookId', requireAdmin, adminGetBook);
+router.post('/admin/books', requireAdmin, adminCreateBook);
+router.put('/admin/books/:bookId', requireAdmin, adminUpdateBook);
+router.delete('/admin/books/:bookId', requireAdmin, adminDeleteBook);
+router.put('/admin/books/introduction', requireAdmin, adminSetIntroductionBook);
+
+// Admin - Page management
+router.post('/admin/books/:bookId/pages', requireAdmin, adminAddPage);
+router.put('/admin/books/:bookId/pages/:pageId', requireAdmin, adminUpdatePage);
+router.delete('/admin/books/:bookId/pages/:pageId', requireAdmin, adminDeletePage);
 
 export default router;
