@@ -21,6 +21,10 @@ model Client {
   // One-time reset token (hashed) and expiry
   resetToken        String?
   resetTokenExpires DateTime?
+
+  // Relations
+  progresses Progression[]
+  savepoints Savepoint[]
 }
 
 model Story {
@@ -33,12 +37,8 @@ model Story {
   content   String
 
   @@unique([bookId, pageId], name: "bookId_pageId")
-}
 
-// UserChoice model removed; choices are no longer persisted
-  // Relations
-  progresses Progression[]
-  savepoints Savepoint[]
+
 }
 
 model Progression {
