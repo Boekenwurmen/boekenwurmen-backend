@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Setup environment
+        run: cp .env.example .env
+
       - name: Install dependencies
         run: npm install
 
