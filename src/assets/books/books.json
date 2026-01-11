@@ -9,7 +9,8 @@
         "co_authors": ["Boaz Crezee"],
         "cover_image_url": "https://www.groenewald.nl/app/uploads/2021/09/Introductie.jpg",
         "creation_date": "1-11-2025",
-        "category": "fiction"
+        "category": "fiction",
+        "source_lang": "en"
       },
       "pages": [
         {
@@ -159,7 +160,8 @@
         "co_authors": ["Boaz Crezee"],
         "cover_image_url": "/covers/race-tegen-de-tijd.png",
         "creation_date": "8-12-2025",
-        "category": "fiction"
+        "category": "fiction",
+        "source_lang": "nl"
       },
       "pages": [
         {

@@ -2,12 +2,14 @@ import Express, { Router } from 'express';
 import { getClient, getClients, createClient, updateClient, loginClient, refreshToken, logoutClient, resetRequest, resetCode, resetDirect } from '../controllers/clientsController.js';
 import { requireAuth } from '../middleware/auth.js';
 import { requireAdmin } from '../middleware/adminAuth.js';
+import { extractLanguage } from '../middleware/languageMiddleware.js';
 import { getBookMetadata, getBooks, getIntroductionBook, getPages, getStory, getChoices, getPageType } from '../controllers/booksController.ts';
 import { getDefaultRoutes } from '../controllers/rootController.ts';
 import { getDefinition, getWordlist } from '../controllers/dictionaryController.ts';
 import { adminLogin, adminLogout, adminRefreshToken, getAdminMe, adminGetClients, adminUpdateClient, adminDeleteClient } from '../controllers/adminController.ts';
 import { adminGetBooks, adminGetBook, adminCreateBook, adminUpdateBook, adminDeleteBook, adminSetIntroductionBook, adminAddPage, adminUpdatePage, adminDeletePage } from '../controllers/adminBooksController.ts';
 import { getProgress, getClientProgress, updateProgress, getSavepoints, createSavepoint, deleteSavepoint } from '../controllers/progressController.ts';
+import { getAvailableLanguages, getCacheStats, clearCache } from '../controllers/translationController.js';
 const router: Router = Express.Router();
 
 router.get('/', getDefaultRoutes);
@@ -25,13 +27,14 @@ router.patch('/clients/:id', updateClient);
 router.post('/clients/refresh', refreshToken);
 router.post('/clients/logout', logoutClient);
 
+// Book routes with translation support (extractLanguage middleware)
 router.get('/books', getBooks);
 router.get('/books/introduction', getIntroductionBook);
 router.get('/books/:bookId', getPages);
-router.get('/books/:bookId/metadata', getBookMetadata);
-router.get('/books/:bookId/:pageId', getStory);
-router.get('/books/:bookId/:pageId/type', getPageType);
-router.get('/books/:bookId/:pageId/options', getChoices);
+router.get('/books/:bookId/metadata', extractLanguage, getBookMetadata);
+router.get('/books/:bookId/:pageId', extractLanguage, getStory);
+router.get('/books/:bookId/:pageId/type', getPageType); // No translation needed for page type
+router.get('/books/:bookId/:pageId/options', extractLanguage, getChoices);
 
 // Choices endpoints removed; only static book options served
 // Progress routes
@@ -46,6 +49,11 @@ router.delete('/savepoints/:savepointId', deleteSavepoint);
 
 router.get('/dictionary', getWordlist);
 router.get('/dictionary/:word', getDefinition);
+
+// Translation utility routes
+router.get('/translation/languages', getAvailableLanguages);
+router.get('/translation/cache/stats', getCacheStats);
+router.post('/translation/cache/clear', requireAuth, clearCache);
 
 // ============ ADMIN ROUTES ============
 
