@@ -9,7 +9,7 @@ import { getDefinition, getWordlist } from '../controllers/dictionaryController.
 import { adminLogin, adminLogout, adminRefreshToken, getAdminMe, adminGetClients, adminUpdateClient, adminDeleteClient } from '../controllers/adminController.ts';
 import { adminGetBooks, adminGetBook, adminCreateBook, adminUpdateBook, adminDeleteBook, adminSetIntroductionBook, adminAddPage, adminUpdatePage, adminDeletePage } from '../controllers/adminBooksController.ts';
 import { getProgress, getClientProgress, updateProgress, getSavepoints, createSavepoint, deleteSavepoint } from '../controllers/progressController.ts';
-import { getAvailableLanguages, getCacheStats, clearCache } from '../controllers/translationController.js';
+import { getAvailableLanguages, getCacheStats, clearCache, getUITranslations } from '../controllers/translationController.js';
 const router: Router = Express.Router();
 
 router.get('/', getDefaultRoutes);
@@ -54,6 +54,7 @@ router.get('/dictionary/:word', getDefinition);
 router.get('/translation/languages', getAvailableLanguages);
 router.get('/translation/cache/stats', getCacheStats);
 router.post('/translation/cache/clear', requireAuth, clearCache);
+router.get('/translation/ui/:lang', getUITranslations);
 
 // ============ ADMIN ROUTES ============
 
