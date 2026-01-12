@@ -109,7 +109,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file (uncomment this if you are using dotenv in your project)
-# .env
+.env
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -196,3 +196,4 @@ build/
 /prisma/prisma/*.sqlite
 /prisma/prisma/*.sqlite-*
 /prisma/*.db
+.db

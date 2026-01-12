@@ -18,4 +18,61 @@ model Client {
   createdAt DateTime @default(now())
   name      String   @unique
   code      String?
+  // One-time reset token (hashed) and expiry
+  resetToken        String?
+  resetTokenExpires DateTime?
+
+  // Relations
+  progresses Progression[]
+  savepoints Savepoint[]
 }
+
+model Story {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  bookId    Int
+  pageId    Int
+  type      String?
+  content   String
+
+  @@unique([bookId, pageId], name: "bookId_pageId")
+
+
+}
+
+model Progression {
+  id        Int      @id @default(autoincrement())
+  clientId  Int
+  client    Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  bookId    Int
+  pageId    Int
+  percentage Int      @default(0) // 0-100
+  updatedAt DateTime @default(now()) @updatedAt
+
+  @@unique([clientId, bookId])
+  @@index([clientId])
+  @@index([bookId])
+}
+
+model Savepoint {
+  id        Int      @id @default(autoincrement())
+  clientId  Int
+  client    Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  bookId    Int
+  pageId    Int
+  title     String?
+  createdAt DateTime @default(now())
+
+  @@index([clientId])
+  @@index([bookId])
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  email     String   @unique
+  password  String   // bcrypt hashed
+  name      String
+  role      String   @default("admin")
+ }
