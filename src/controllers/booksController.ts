@@ -4,6 +4,8 @@ import { NextFunction, Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
 import { Client} from '../../prisma/types.ts';
 import * as booksData from '../assets/books/books.json' with { type: 'json' };
+import { translationService } from '../services/translationService.js';
+import { LanguageRequest } from '../middleware/languageMiddleware.js';
 
 const prisma: PrismaClient = new PrismaClient();
 
@@ -133,7 +135,26 @@ export async function getPages(req: Request, res: Response, next: NextFunction):
 export async function getBookMetadata(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
     const { bookId } = req.params;
-    const data = _getBookMetadataJson(parseInt(bookId));
+    const langReq = req as LanguageRequest;
+    let data = _getBookMetadataJson(parseInt(bookId));
+
+    // Translate metadata fields if translation is requested
+    if (langReq.targetLang && data) {
+      // Use per-book source language from metadata, fallback to env var
+      const sourceLang = (data as any).source_lang || process.env.TRANSLATION_SOURCE_LANG || 'en';
+
+      // Only translate if target language differs from source language
+      if (langReq.targetLang !== sourceLang) {
+        const [title, description] = await translationService.translateBatch(
+          [data.title || '', data.description || ''],
+          sourceLang,
+          langReq.targetLang
+        );
+
+        data = { ...data, title, description };
+      }
+    }
+
     const response: Object = {
       meta: {
         count: 1,
@@ -175,7 +196,22 @@ export async function getStory(req: Request, res: Response, next: NextFunction):
       });
       return;
     }
-    const data = _getPageStory(bookIdx, pageIdx);
+
+    const langReq = req as LanguageRequest;
+    let data = _getPageStory(bookIdx, pageIdx);
+
+    // Translate story text if translation is requested
+    if (langReq.targetLang && data) {
+      // Get source language from book metadata
+      const metadata = _getBookMetadataJson(bookIdx);
+      const sourceLang = (metadata as any)?.source_lang || process.env.TRANSLATION_SOURCE_LANG || 'en';
+
+      // Only translate if target language differs from source language
+      if (langReq.targetLang !== sourceLang) {
+        data = await translationService.translate(data, sourceLang, langReq.targetLang);
+      }
+    }
+
     const response: Object = {
       meta: {
         count: 1,
@@ -259,7 +295,31 @@ export async function getChoices(req: Request, res: Response, next: NextFunction
       });
       return;
     }
-    const data = _getPageOptions(bookIdx, pageIdx);
+
+    const langReq = req as LanguageRequest;
+    let data = _getPageOptions(bookIdx, pageIdx);
+
+    // Translate action button names if translation is requested
+    if (langReq.targetLang && data && data.length > 0) {
+      // Get source language from book metadata
+      const metadata = _getBookMetadataJson(bookIdx);
+      const sourceLang = (metadata as any)?.source_lang || process.env.TRANSLATION_SOURCE_LANG || 'en';
+
+      // Only translate if target language differs from source language
+      if (langReq.targetLang !== sourceLang) {
+        const translatedNames = await translationService.translateBatch(
+          data.map(opt => opt.name),
+          sourceLang,
+          langReq.targetLang
+        );
+
+        data = data.map((opt, idx) => ({
+          ...opt,
+          name: translatedNames[idx]
+        }));
+      }
+    }
+
     const response: Object = {
       meta: {
         count: 1,
