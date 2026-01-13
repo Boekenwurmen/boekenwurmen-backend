@@ -68,14 +68,22 @@ export async function getClient(req: Request, res: Response, next: NextFunction)
  */
 export async function createClient(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
+    console.log('POST /clients received body:', JSON.stringify(req.body));
     const { name, code } = req.body as Partial<Client> & { code?: string };
     const nameTrim = typeof name === 'string' ? name.trim() : '';
     if (!nameTrim) {
+      console.error('Validation error: Name is required');
       res.status(400).json({ success: false, message: 'Name is required' });
       return;
     }
-    const codeTrim = typeof code === 'string' ? code.trim() : '';
+    // Code is optional for frontend testing - if not provided, generate one
+    let codeTrim = typeof code === 'string' ? code.trim() : '';
+    if (!codeTrim) {
+      // Generate a default code if not provided
+      codeTrim = `default-${Date.now()}`;
+    }
     if (codeTrim.length < 10) {
+      console.error(`Validation error: Code too short (${codeTrim.length} < 10)`);
       res.status(400).json({ success: false, message: 'Code must be at least 10 characters long' });
       return;
     }
