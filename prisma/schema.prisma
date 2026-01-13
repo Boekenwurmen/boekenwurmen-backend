@@ -23,8 +23,8 @@ model Client {
   resetTokenExpires DateTime?
 
   // Relations
-  progresses Progression[]
-  savepoints Savepoint[]
+  // progresses Progression[]
+  // savepoints Savepoint[]
 }
 
 model Story {
