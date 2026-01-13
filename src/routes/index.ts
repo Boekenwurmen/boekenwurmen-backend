@@ -19,7 +19,7 @@ router.post('/clients/login', loginClient);
 router.post('/clients/reset-request', resetRequest);
 router.post('/clients/reset', resetCode);
 router.post('/clients/reset-direct', resetDirect);
-router.get('/clients', getClients); // Temporarily removed requireAuth for testing
+router.get('/clients', requireAuth, getClients);
 // Allow public read of a single client (sanitized to id+name only)
 router.get('/clients/:id', getClient);
 router.post('/clients', createClient);
