@@ -49,6 +49,23 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 // Error handler (last) - implemented a custom error handler
 app.use(errorHandler);
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`🍿 Express running → PORT ${port}`);
+});
+
+// Keep the process alive
+process.on('SIGINT', () => {
+  console.log('Received SIGINT. Shutting down gracefully...');
+  server.close(() => {
+    console.log('Server closed.');
+    process.exit(0);
+  });
+});
+
+process.on('SIGTERM', () => {
+  console.log('Received SIGTERM. Shutting down gracefully...');
+  server.close(() => {
+    console.log('Server closed.');
+    process.exit(0);
+  });
 });

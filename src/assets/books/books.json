@@ -7,9 +7,10 @@
         "description": "introductieverhaal",
         "author": "Gijs Borghouts",
         "co_authors": ["Boaz Crezee"],
-        "cover_image_url": "https://tenor.com/view/rat-dancing-rat-dancing-gif-24339527",
+        "cover_image_url": "https://www.groenewald.nl/app/uploads/2021/09/Introductie.jpg",
         "creation_date": "1-11-2025",
-        "category": "fiction"
+        "category": "fiction",
+        "source_lang": "en"
       },
       "pages": [
         {
@@ -68,7 +69,8 @@
           "story": "The library appears to be shut securely, an old librarian asks you if you have been here before.",
           "type": "page",
           "options": [
-            {"toPage":8, "type": "page", "name":"I'm new here"}
+            {"toPage":8, "type": "page", "name":"I'm new here"},
+            {"toPage":0, "type": "to login", "name":"I've been here before"}
           ]
         },
         {
@@ -157,9 +159,10 @@
         "description": "Een tijdreiziger wordt in de middeleeuwen gekatapulteerd met slechts één uur om een geheim document te vinden dat de toekomst kan redden. Elke keuze telt, want wanneer de timer afloopt, verdwijn je terug naar het heden.",
         "author": "ChatGPT",
         "co_authors": ["Boaz Crezee"],
-        "cover_image_url": "https://tenor.com/view/rat-dancing-rat-dancing-gif-24339527",
+        "cover_image_url": "/covers/race-tegen-de-tijd.png",
         "creation_date": "8-12-2025",
-        "category": "fiction"
+        "category": "fiction",
+        "source_lang": "nl"
       },
       "pages": [
         {
