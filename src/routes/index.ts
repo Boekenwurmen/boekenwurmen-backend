@@ -8,7 +8,7 @@ import { getDefaultRoutes } from '../controllers/rootController.ts';
 import { getDefinition, getWordlist } from '../controllers/dictionaryController.ts';
 import { adminLogin, adminLogout, adminRefreshToken, getAdminMe, adminGetClients, adminUpdateClient, adminDeleteClient } from '../controllers/adminController.ts';
 import { adminGetBooks, adminGetBook, adminCreateBook, adminUpdateBook, adminDeleteBook, adminSetIntroductionBook, adminAddPage, adminUpdatePage, adminDeletePage } from '../controllers/adminBooksController.ts';
-import { getProgress, getClientProgress, updateProgress, getSavepoints, createSavepoint, deleteSavepoint } from '../controllers/progressController.ts';
+import { getProgress, getClientProgress, updateProgress, getSavepoints, createSavepoint, deleteSavepoint, deleteAllSavepointsForBook } from '../controllers/progressController.ts';
 import { getAvailableLanguages, getCacheStats, clearCache, getUITranslations } from '../controllers/translationController.js';
 const router: Router = Express.Router();
 
@@ -45,6 +45,7 @@ router.patch('/progress/:clientId/:bookId', updateProgress);
 // Savepoint routes
 router.get('/savepoints/:clientId/:bookId', getSavepoints);
 router.post('/savepoints/:clientId/:bookId', createSavepoint);
+router.delete('/savepoints/:clientId/:bookId', deleteAllSavepointsForBook);
 router.delete('/savepoints/:savepointId', deleteSavepoint);
 
 router.get('/dictionary', getWordlist);

@@ -23,8 +23,8 @@ model Client {
   resetTokenExpires DateTime?
 
   // Relations
-  progresses Progression[]
-  savepoints Savepoint[]
+  // progresses Progression[]
+  // savepoints Savepoint[]
 }
 
 model Story {
@@ -42,13 +42,13 @@ model Story {
 }
 
 model Progression {
-  id        Int      @id @default(autoincrement())
-  clientId  Int
-  client    Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
-  bookId    Int
-  pageId    Int
-  percentage Int      @default(0) // 0-100
-  updatedAt DateTime @default(now()) @updatedAt
+  id          Int      @id @default(autoincrement())
+  clientId    String   // Can be numeric ID or string (offline users)
+  bookId      Int
+  pageId      Int      // Current page
+  highestPage Int      @default(0) // Highest page reached (for progress bar)
+  percentage  Int      @default(0) // 0-100
+  updatedAt   DateTime @default(now()) @updatedAt
 
   @@unique([clientId, bookId])
   @@index([clientId])
@@ -57,8 +57,7 @@ model Progression {
 
 model Savepoint {
   id        Int      @id @default(autoincrement())
-  clientId  Int
-  client    Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  clientId  String   // Can be numeric ID or string (offline users)
   bookId    Int
   pageId    Int
   title     String?
