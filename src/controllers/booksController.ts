@@ -3,7 +3,7 @@ import { NextFunction, Request, Response } from 'express';
 // import { PrismaClient } from '../../node_modules/.prisma/client/default.js';
 import { PrismaClient } from '@prisma/client';
 import { Client} from '../../prisma/types.ts';
-import * as booksData from '../assets/books/books.json' with { type: 'json' };
+import booksData from '../assets/books/books.json' with { type: 'json' };
 import { translationService } from '../services/translationService.js';
 import { LanguageRequest } from '../middleware/languageMiddleware.js';
 
@@ -381,7 +381,7 @@ function _getBookMetadataJson(bookId:number | null | undefined) {
 }
 
 function _getBooksArrayJson() {
-  return booksData?.default?.books;
+  return booksData?.books;
 }
 
 function _getBookRoutesJson() {
@@ -391,7 +391,7 @@ function _getBookRoutesJson() {
 }
 
 function _getIntroductionBookJson() {
-  return booksData?.default?.introduction_book;
+  return booksData?.introduction_book;
 }
 
 function _getBookJson(bookId: number) {
