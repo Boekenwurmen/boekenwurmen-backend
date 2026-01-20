@@ -11,6 +11,7 @@
     "dev": "nodemon --watch src --ext ts --exec tsx src/start.ts",
     "start": "tsx src/start.ts",
     "test": "vitest run --passWithNoTests",
+    "test:coverage": "vitest run --coverage",
     "migrate": "npx prisma migrate dev --name init --skip-generate",
     "seed": "npx prisma db seed",
     "db": "npm run migrate && npm run seed",
@@ -45,6 +46,7 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsdoc": "^54.7.0",
     "prisma": "^6.14.0",
+    "sonarqube-scanner": "^4.3.4",
     "tsx": "^4.20.4",
     "typescript": "5.9",
     "vitest": "^3.1.4"
